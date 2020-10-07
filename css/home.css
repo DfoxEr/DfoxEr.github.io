@@ -127,7 +127,7 @@ button:focus, input:focus {
 
 .button_burger .button__icon {
   margin: 0;
-  width: 20px;
+  width: 26px;
 }
 
 @media screen and (max-width: 475px) {
@@ -169,6 +169,12 @@ button:focus, input:focus {
     width: 100%;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .input_address {
+    display: none;
   }
 }
 
@@ -224,6 +230,15 @@ button:focus, input:focus {
 @media screen and (max-width: 576px) {
   .header__logo {
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .header__logo {
+    width: 130px;
+  }
+  .header__logo .logo__img {
+    width: 100%;
   }
 }
 
