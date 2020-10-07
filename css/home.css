@@ -311,37 +311,54 @@ button:focus, input:focus {
 
 @media screen and (max-width: 992px) {
   .offer__heading {
-    width: 100%;
+    width: 70%;
   }
   .offer__card {
-    background-image: none;
-    padding: 50px 40px;
+    background-position: right -200px center;
+    background-size: 400px;
+    padding: 55px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offer__heading {
+    width: 90%;
+  }
+  .offer__card {
+    background-position: bottom -150px right -130px;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .offer__card {
+    padding: 40px 28px;
+    background-position: bottom -180px right -140px;
+  }
   .offer__title {
     font-size: 34px;
-    line-height: normal;
+    line-height: 1.2;
   }
   .offer__subtitle {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .offer__card {
-    padding: 40px;
+    font-size: 18px;
+    line-height: 1.2;
   }
 }
 
 @media screen and (max-width: 475px) {
   .offer__title {
-    font-size: 26px;
+    font-size: 30px;
+  }
+  .offer__subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .offer__title {
+    font-size: 28px;
   }
   .offer__subtitle {
     font-size: 14px;
-  }
-  .offer__card {
-    padding: 26px;
   }
 }
 
