@@ -538,8 +538,12 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 576px) {
+  .restaurant-card {
+    margin: 10px 0;
+  }
   .restaurant-card__title {
     font-size: 22px;
+    line-height: normal;
   }
   .restaurant-card__time {
     font-size: 12px;
