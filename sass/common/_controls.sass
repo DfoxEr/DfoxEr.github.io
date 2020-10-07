@@ -1,0 +1,73 @@
+// logo
+.logo
+    display: flex
+    align-items: center
+    margin-right: 30px
+
+// кнопочки
+.button
+    padding: 8px 16px
+    font-size: 16px
+    line-height: 24px
+    display: flex
+    align-items: center
+    cursor: pointer
+    border: none
+    border-radius: 2px
+    color: $secondary
+    border: 1px solid #D9D9D9
+    background: none
+
+    &__icon
+        margin-right: 4px
+
+    &_primary
+        background: $primary
+        border-color: $primary
+        color: #fff
+
+    &_burger
+        display: none
+        margin-left: 10px
+        .button__icon
+            margin: 0
+            width: 20px
+
+        @media screen and ( max-width: $md6 )
+            display: flex
+
+// поля ввода
+
+.input
+    padding: 8px 35px
+    font-size: 16px
+    line-height: 24px
+    border: 1px solid #D9D9D9
+    border-radius: 2px
+
+    &_address
+        background: url('../../img/home.svg') no-repeat left 10px center
+        width: 690px
+        font-size: 14px
+
+        @media screen and ( max-width: $md3 )
+            width: 100%
+            text-overflow: ellipsis
+            padding-right: 10px
+        
+        @media screen and ( max-width: $md4 )
+            background-image: none
+            padding: 0 10px
+
+        @media screen and ( max-width: $md7 )
+            font-size: 16px
+
+
+    &_search
+        background: url('../../img/search-icon.svg') no-repeat left 10px center
+
+    &::placeholder
+        color: #a3a3a3
+
+    &:focus::placeholder
+        color: transparent

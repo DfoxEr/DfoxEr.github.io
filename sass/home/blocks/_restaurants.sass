@@ -1,0 +1,80 @@
+.restaurants
+    padding-bottom: 70px
+    &__heading
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 44px
+
+    &__title
+        font-size: 36px
+        line-height: 42px
+
+    &__grid
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: flex-start
+
+.restaurant-card
+    background: #FFFFFF
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+    border-radius: 7px
+    overflow: hidden
+    margin-bottom: 20px
+    max-width: 384px
+
+    &__img
+        object-fit: cover
+        width: 384px
+        height: 250px
+
+    &__text
+        padding: 21px 21px 34px 21px
+
+    &__heading
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 10px
+
+    &__title
+        font-size: 24px
+        line-height: 32px
+    
+    &__time
+        padding: 3px 8px
+        background: #262626
+        color: #ffffff
+        font-size: 14px
+        border-radius: 2px
+        line-height: 20px
+
+    &__info
+        display: flex
+
+    &__rating
+        margin-right: 15px
+        color: #FFC107
+        font-size: 18px
+        line-height: 32px
+        @include bold()
+    
+    &__cost, &__category
+        font-size: 18px
+        line-height: 32px
+        color: #8C8C8C
+        display: inline-block
+
+    &__cost
+        display: flex
+        align-items: center
+
+    &__cost::after
+        content: ""
+        display: flex
+        width: 5px
+        height: 5px
+        background: #8C8C8C
+        margin: 0 8px
+        border-radius: 50%

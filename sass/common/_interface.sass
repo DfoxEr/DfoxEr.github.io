@@ -1,0 +1,45 @@
+$md1: 1200px
+$md2: 992px
+$md3: 768px
+$md4: 576px
+$md5: 475px
+$md6: 425px
+$md7: 375px
+$md8: 325px
+
+
+body
+    @include mainfont()
+    overflow-x: hidden
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1 0 auto
+
+button:focus, input:focus
+    outline: none
+
+.container
+    max-width: 1200px
+    margin: auto
+    padding: 0 10px
+
+
+.menu
+    display: flex
+
+    &__item
+        margin-right: 15px
+
+    &__link
+        font-size: 18px
+        line-height: 21px
+        color: $secondary
+        padding: 20px 0px
+
+        &:hover
+            text-decoration: underline
