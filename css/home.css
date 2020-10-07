@@ -129,7 +129,7 @@ button:focus, input:focus {
   width: 20px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .button_burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -151,25 +151,13 @@ button:focus, input:focus {
   font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
-  .input_address {
-    width: 100%;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    padding-right: 10px;
-  }
-}
-
 @media screen and (max-width: 576px) {
   .input_address {
     background-image: none;
-    padding: 0 10px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .input_address {
-    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
   }
 }
 
@@ -222,21 +210,13 @@ button:focus, input:focus {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 475px) {
-  .header__logo {
-    margin-right: 10px;
-    width: 60px;
-    overflow: hidden;
-  }
-}
-
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .header__buttons {
     display: none;
   }
@@ -244,17 +224,6 @@ button:focus, input:focus {
 
 .header__button {
   margin-left: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .header__button .button__text {
-    display: none;
-  }
-  .header__button .button__icon {
-    margin-right: 0;
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .offer {
