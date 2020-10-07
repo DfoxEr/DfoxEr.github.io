@@ -321,6 +321,9 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 768px) {
+  .offer {
+    padding-top: 0;
+  }
   .offer__heading {
     width: 90%;
   }
@@ -345,11 +348,17 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 475px) {
+  .offer__heading {
+    width: 100%;
+  }
   .offer__title {
-    font-size: 30px;
+    font-size: 32px;
   }
   .offer__subtitle {
     font-size: 16px;
+  }
+  .offer__card {
+    background-position: bottom -180px right -175px;
   }
 }
 
