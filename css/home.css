@@ -122,6 +122,7 @@ button:focus, input:focus {
 .button_burger {
   display: none;
   margin-left: 10px;
+  border: none;
 }
 
 .button_burger .button__icon {
@@ -129,11 +130,21 @@ button:focus, input:focus {
   width: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 475px) {
   .button_burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button__text {
+    display: none;
+  }
+  .button__icon {
+    margin-right: 0;
+    width: 20px;
   }
 }
 
@@ -210,13 +221,19 @@ button:focus, input:focus {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 576px) {
+  .header__logo {
+    margin-right: 10px;
+  }
+}
+
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 475px) {
   .header__buttons {
     display: none;
   }

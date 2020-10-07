@@ -29,13 +29,20 @@
     &_burger
         display: none
         margin-left: 10px
+        border: none
         .button__icon
             margin: 0
             width: 20px
 
-        @media screen and ( max-width: $md3 )
+        @media screen and ( max-width: $md5 )
             display: flex
 
+    @media screen and ( max-width: $md3 )
+        &__text
+            display: none
+        &__icon
+            margin-right: 0
+            width: 20px
 // поля ввода
 
 .input
