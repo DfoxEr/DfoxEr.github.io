@@ -123,11 +123,19 @@ button:focus, input:focus {
   display: none;
   margin-left: 10px;
   border: none;
+  width: 60px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button_burger .button__icon {
   margin: 0;
-  width: 26px;
+  width: 100%;
 }
 
 @media screen and (max-width: 475px) {
@@ -227,18 +235,21 @@ button:focus, input:focus {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 576px) {
-  .header__logo {
-    margin-right: 10px;
+@media screen and (max-width: 475px) {
+  .header__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 @media screen and (max-width: 475px) {
   .header__logo {
-    width: 130px;
+    margin-right: 10px;
+    padding: 15px;
   }
   .header__logo .logo__img {
-    width: 100%;
+    width: 120px;
   }
 }
 
@@ -258,6 +269,12 @@ button:focus, input:focus {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 475px) {
+  .header {
+    padding: 21px 0px;
+  }
+}
+
 .offer {
   padding-top: 20px;
   margin-bottom: 55px;
@@ -272,7 +289,7 @@ button:focus, input:focus {
   background-image: url("../../img/promo-bg.png");
   background-repeat: no-repeat;
   background-position: right bottom -70px;
-  background-size: 450px;
+  background-size: 50%;
 }
 
 .offer__title {
@@ -283,9 +300,49 @@ button:focus, input:focus {
 
 .offer__subtitle {
   color: #302C34;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   max-width: 600px;
+}
+
+.offer__heading {
+  width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .offer__heading {
+    width: 100%;
+  }
+  .offer__card {
+    background-image: none;
+    padding: 50px 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .offer__title {
+    font-size: 34px;
+    line-height: normal;
+  }
+  .offer__subtitle {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .offer__card {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .offer__title {
+    font-size: 26px;
+  }
+  .offer__subtitle {
+    font-size: 14px;
+  }
+  .offer__card {
+    padding: 26px;
+  }
 }
 
 .restaurants {

@@ -10,7 +10,7 @@
         background-image: url('../../img/promo-bg.png')
         background-repeat: no-repeat
         background-position: right bottom -70px
-        background-size: 450px
+        background-size: 50%
 
     &__title
         font-size: 39px
@@ -19,6 +19,37 @@
 
     &__subtitle
         color: $dark
-        font-size: 24px
+        font-size: 20px
         line-height: 28px
         max-width: 600px
+
+    &__heading
+        width: 50%
+
+    @media screen and ( max-width: $md2 )
+        &__heading
+            width: 100%
+        &__card
+            background-image: none
+            padding: 50px 40px
+
+
+    @media screen and ( max-width: $md4 )
+        &__title
+            font-size: 34px
+            line-height: normal
+        &__subtitle
+            font-size: 16px
+            line-height: normal
+        &__card
+            padding: 40px
+
+    @media screen and ( max-width: $md5 )
+        &__title
+            font-size: 26px
+
+        &__subtitle
+            font-size: 14px
+
+        &__card
+            padding: 26px
