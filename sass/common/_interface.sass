@@ -19,6 +19,7 @@ body
 
 main
     flex: 1 0 auto
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
 
 button:focus, input:focus
     outline: none
@@ -27,6 +28,15 @@ button:focus, input:focus
     max-width: 1200px
     margin: auto
     padding: 0 10px
+
+    @media screen and ( max-width: $md1 )
+        max-width: 992px
+
+    @media screen and ( max-width: $md2 )
+        max-width: 768px
+    
+    @media screen and ( max-width: $md3 )
+        max-width: 100%
 
 
 
