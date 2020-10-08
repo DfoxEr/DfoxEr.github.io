@@ -2,3 +2,47 @@
     &_restaurant
         .section__title
             margin-right: 30px
+
+// карточка блюда
+.dish-card
+    &__text
+        padding: 21px 21px 34px 21px
+
+    &__title
+        @include regular()
+
+    &__ingredients
+        font-size: 16px
+        line-height: 21px
+        color: #8C8C8C
+        text-overflow: ellipsis
+        
+        margin: 5px 0px 24px 0px
+
+
+
+    &__order-block
+        display: flex
+        align-items: center
+
+    &__order-btn
+        margin-right: 32px
+        .button__icon
+            margin: 0px 0px 0px 4px
+
+    &__cost
+        font-size: 20px
+        line-height: 32px
+        color: #000000
+        @include bold()
+
+    @media screen and ( max-width: $md4 )
+        &__ingredients
+            font-size: 14px
+        
+        &__cost
+            font-size: 16px
+
+        &__order-btn
+            padding: 6px 12px
+            font-size: 16px

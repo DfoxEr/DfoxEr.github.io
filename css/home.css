@@ -126,9 +126,6 @@ button:focus, input:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .card {
@@ -154,8 +151,6 @@ button:focus, input:focus {
 .card__img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .card__heading {
@@ -202,10 +197,8 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 992px) {
-  .card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 47%;
-            flex: 0 0 47%;
+  .card__img {
+    max-height: 200px;
   }
   .card__heading {
     margin-bottom: 5px;
@@ -223,11 +216,6 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 576px) {
-  .card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
-  }
   .card__title {
     font-size: 22px;
     line-height: normal;
@@ -246,47 +234,6 @@ button:focus, input:focus {
   .card__text {
     padding: 20px 14px;
   }
-}
-
-.dish-card__text {
-  padding: 21px 21px 34px 21px;
-}
-
-.dish-card__title {
-  font-weight: 400;
-}
-
-.dish-card__ingredients {
-  font-size: 16px;
-  line-height: 21px;
-  color: #8C8C8C;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  margin: 5px 0px 24px 0px;
-}
-
-.dish-card__order-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.dish-card__order-btn {
-  margin-right: 32px;
-}
-
-.dish-card__order-btn .button__icon {
-  margin: 0px 0px 0px 4px;
-}
-
-.dish-card__cost {
-  font-size: 20px;
-  line-height: 32px;
-  color: #000000;
-  font-weight: 700;
 }
 
 .restaurant-info {
