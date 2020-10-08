@@ -144,9 +144,8 @@ button:focus, input:focus {
 .button_burger {
   display: none;
   margin-left: 10px;
+  padding: 10px;
   border: none;
-  width: 60px;
-  height: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -157,7 +156,7 @@ button:focus, input:focus {
 
 .button_burger .button__icon {
   margin: 0;
-  width: 100%;
+  width: 26px;
 }
 
 @media screen and (max-width: 475px) {
@@ -174,7 +173,6 @@ button:focus, input:focus {
   }
   .button__icon {
     margin-right: 0;
-    width: 20px;
   }
 }
 
