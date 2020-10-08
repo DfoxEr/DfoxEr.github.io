@@ -197,6 +197,9 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 992px) {
+  .card__info {
+    white-space: nowrap;
+  }
   .card__img {
     max-height: 200px;
   }
@@ -222,6 +225,18 @@ button:focus, input:focus {
   }
   .card__tag {
     font-size: 12px;
+  }
+  .card .restaurant-info__cost, .card .restaurant-info__category {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .card .restaurant-info__rating {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .card .restaurant-info__star {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -282,27 +297,6 @@ button:focus, input:focus {
   background: #8C8C8C;
   margin: 0 8px;
   border-radius: 50%;
-}
-
-@media screen and (max-width: 992px) {
-  .restaurant-info {
-    white-space: nowrap;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .restaurant-info__cost, .restaurant-info__category {
-    font-size: 12px;
-    line-height: normal;
-  }
-  .restaurant-info__rating {
-    font-size: 12px;
-    line-height: normal;
-  }
-  .restaurant-info__star {
-    width: 10px;
-    height: 10px;
-  }
 }
 
 .logo {

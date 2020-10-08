@@ -121,6 +121,9 @@ button:focus, input:focus
 
     @media screen and ( max-width: $md2 )
 
+        &__info
+            white-space: nowrap
+
         &__img
             max-height: 200px
 
@@ -144,6 +147,19 @@ button:focus, input:focus
 
         &__tag
             font-size: 12px
+
+
+        .restaurant-info__cost, .restaurant-info__category
+            font-size: 12px
+            line-height: normal
+
+        .restaurant-info__rating
+            font-size: 12px
+            line-height: normal
+
+        .restaurant-info__star
+            width: 10px
+            height: 10px
 
     @media screen and ( max-width: $md5 )
         flex: 1 1 auto
@@ -188,20 +204,5 @@ button:focus, input:focus
         margin: 0 8px
         border-radius: 50%
 
-    @media screen and ( max-width: $md2 )
-        white-space: nowrap
-
-    @media screen and ( max-width: $md4 )
-
-        &__cost, &__category
-            font-size: 12px
-            line-height: normal
-
-        &__rating
-            font-size: 12px
-            line-height: normal
-
-        &__star
-            width: 10px
-            height: 10px
+    
         
