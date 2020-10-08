@@ -394,6 +394,15 @@ button:focus, input:focus {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .offer__card {
+    padding: 20px;
+  }
+  .offer__title {
+    font-size: 24px;
+  }
+}
+
 .restaurants {
   padding-bottom: 70px;
 }
@@ -489,6 +498,10 @@ button:focus, input:focus {
 .restaurant-card__title {
   font-size: 24px;
   line-height: 32px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .restaurant-card__time {
@@ -498,6 +511,8 @@ button:focus, input:focus {
   font-size: 14px;
   border-radius: 2px;
   line-height: 20px;
+  white-space: nowrap;
+  margin-left: 10px;
 }
 
 .restaurant-card__info {
@@ -519,6 +534,12 @@ button:focus, input:focus {
   line-height: 32px;
   color: #8C8C8C;
   display: inline-block;
+}
+
+.restaurant-card__category {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .restaurant-card__cost {
