@@ -547,7 +547,7 @@ button:focus, input:focus {
 
 @media screen and (max-width: 576px) {
   .dish-card__ingredients {
-    font-size: 14px;
+    font-size: 12px;
   }
   .dish-card__cost {
     font-size: 16px;
