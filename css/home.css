@@ -212,7 +212,7 @@ button:focus, input:focus {
 
 @media screen and (max-width: 576px) {
   .input_search {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -339,7 +339,7 @@ button:focus, input:focus {
   .offer__card {
     background-position: right -200px center;
     background-size: 400px;
-    padding: 55px;
+    padding: 50px;
   }
 }
 
@@ -401,6 +401,9 @@ button:focus, input:focus {
   .offer__title {
     font-size: 24px;
   }
+  .offer__subtitle {
+    font-size: 12px;
+  }
 }
 
 .restaurants {
@@ -423,6 +426,8 @@ button:focus, input:focus {
 @media screen and (max-width: 576px) {
   .restaurants__heading {
     margin-bottom: 25px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -435,6 +440,7 @@ button:focus, input:focus {
   .restaurants__title {
     font-size: 30px;
     line-height: normal;
+    margin-bottom: 10px;
   }
 }
 
