@@ -498,6 +498,21 @@ button:focus, input:focus {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 576px) {
+  .section_restaurant .section__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .section_restaurant .section__title {
+    margin-right: 0;
+  }
+}
+
 .dish-card__text {
   padding: 21px 21px 34px 21px;
 }
