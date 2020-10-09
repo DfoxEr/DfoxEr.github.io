@@ -559,6 +559,12 @@ button:focus, input:focus {
   font-weight: 400;
 }
 
+@media screen and (max-width: 576px) {
+  .dish-card__title {
+    font-size: 26px;
+  }
+}
+
 .dish-card__ingredients {
   font-size: 14px;
   line-height: 21px;
