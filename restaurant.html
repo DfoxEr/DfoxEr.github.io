@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- style.min.css -->
     <link rel="stylesheet" href="/css/restaurant.min.css">
 
@@ -22,13 +25,13 @@
     
     
                 <div class="header__buttons">
-                    <button class="header__button header__sign-in button button_primary">
+                    <button class="header__button button button_primary">
                         <img src="/img/user.svg" alt="user" class="button__icon">
 
                         <span class="button__text">Войти</span>
                     </button>
 
-                    <button class="header__button header__cart button">
+                    <button class="header__button button" id="cart-button">
                         <img src="/img/shopping-cart.svg" alt="cart" class="button__icon">
 
                         <span class="button__text">Корзина</span>
@@ -60,8 +63,8 @@
 
                 <div class="section__grid">
                     
-                    <div class="card dish-card">
-                        <img src="img/dishes/1.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <img src="/restaurants/tanuki/dishes/1.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -81,8 +84,8 @@
                         </div>
                     </div>
 
-                    <div class="card dish-card">
-                        <img src="img/dishes/2.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <img src="/restaurants/tanuki/dishes/2.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -102,8 +105,8 @@
                         </div>
                     </div>
 
-                    <div class="card dish-card">
-                        <img src="img/dishes/3.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                        <img src="/restaurants/tanuki/dishes/3.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -123,8 +126,8 @@
                         </div>
                     </div>
 
-                    <div class="card dish-card">
-                        <img src="img/dishes/1.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+                        <img src="/restaurants/tanuki/dishes/4.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -144,8 +147,8 @@
                         </div>
                     </div>
 
-                    <div class="card dish-card">
-                        <img src="img/dishes/2.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+                        <img src="/restaurants/tanuki/dishes/5.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -165,8 +168,8 @@
                         </div>
                     </div>
 
-                    <div class="card dish-card">
-                        <img src="img/dishes/3.png" alt="ресторан" class="card__img">
+                    <div class="card dish-card wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+                        <img src="/restaurants/tanuki/dishes/6.png" alt="ресторан" class="card__img">
 
                         <div class="card__text dish-card__text">
                             <div class="card__heading">
@@ -231,5 +234,83 @@
     </footer>
     <!-- /.footer -->
 
+    <div class="modal modal_cart">
+        <div class="modal__window">
+            <div class="modal__header">
+                <h3 class="modal__title">Корзина</h3>
+
+                <button class="modal__close" id="cart-close">&times;</button>
+            </div>
+
+            <div class="modal__body">
+                <div class="order">
+                    <span class="order__name">Ролл угорь стандарт</span>
+                    <div class="order__cost">250 ₽</div>
+
+                    <div class="order-counter">
+                        <button class="order-counter__button">-</button>
+                        <span class="order-counter__count">1</span>
+                        <button class="order-counter__button">+</button>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <span class="order__name">Ролл угорь стандарт</span>
+                    <div class="order__cost">250 ₽</div>
+
+                    <div class="order-counter">
+                        <button class="order-counter__button">-</button>
+                        <span class="order-counter__count">1</span>
+                        <button class="order-counter__button">+</button>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <span class="order__name">Ролл угорь стандарт</span>
+                    <div class="order__cost">250 ₽</div>
+
+                    <div class="order-counter">
+                        <button class="order-counter__button">-</button>
+                        <span class="order-counter__count">1</span>
+                        <button class="order-counter__button">+</button>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <span class="order__name">Ролл угорь стандарт</span>
+                    <div class="order__cost">250 ₽</div>
+
+                    <div class="order-counter">
+                        <button class="order-counter__button">-</button>
+                        <span class="order-counter__count">1</span>
+                        <button class="order-counter__button">+</button>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <span class="order__name">Ролл угорь стандарт</span>
+                    <div class="order__cost">250 ₽</div>
+
+                    <div class="order-counter">
+                        <button class="order-counter__button">-</button>
+                        <span class="order-counter__count">1</span>
+                        <button class="order-counter__button">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <span class="modal__pricetag">1250 ₽</span>
+
+                <div class="modal__buttons">
+                    <button class="button button_primary modal__button modal__order-button">Оформить заказ</button>
+                    <button class="button modal__button modal__cancel-button">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
