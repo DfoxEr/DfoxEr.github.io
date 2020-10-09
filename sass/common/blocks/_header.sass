@@ -9,6 +9,9 @@
         @media screen and ( max-width: $md5 )
             align-items: center
 
+        @media screen and ( max-width: $md4 )
+            flex-wrap: wrap
+
     &__logo
 
         @media screen and ( max-width: $md5 )
@@ -18,9 +21,10 @@
     &__buttons
         display: flex
 
-        @media screen and ( max-width: $md5 )
-            display: none
-
+        @media screen and ( max-width: $md4 )
+            width: 100%
+            justify-content: space-between
+            margin-top: 5px
 
     &__button
         margin-left: 10px
@@ -30,6 +34,16 @@
                 display: none
             .button__icon
                 margin-right: 0
+        @media screen and ( max-width: $md4 )
+            margin: 0px
+            flex: 0 1 49%
+            padding: 8px 12px
+
+            .button__text
+                display: block
+
+            .button__icon
+                margin-right: 5px
 
     @media screen and ( max-width: $md5 )
         padding: 10px 0px
