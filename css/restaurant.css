@@ -609,10 +609,13 @@ button:focus, input:focus {
           flex: 1 1 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .footer {
     padding: 30px 0px;
   }
+}
+
+@media screen and (max-width: 768px) {
   .footer__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -631,19 +634,6 @@ button:focus, input:focus {
   }
   .footer__logo {
     margin: 0px 0px 10px 0px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .footer__inner {
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-  }
-  .footer__block {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
 }
 
@@ -709,19 +699,25 @@ button:focus, input:focus {
 @media screen and (max-width: 768px) {
   .menu__link {
     padding: 10px 8px;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .menu {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .menu__item {
+    margin-right: 0;
+  }
   .menu__link {
-    font-size: 14px;
     white-space: nowrap;
-    padding: 5px 12px 5px 0px;
+    padding: 8px;
   }
 }

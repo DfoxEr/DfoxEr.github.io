@@ -17,8 +17,10 @@
     &__menu
         flex: 1 1 auto
 
-    @media screen and ( max-width: $md3 )
+    @media screen and ( max-width: $md2 )
         padding: 30px 0px
+
+    @media screen and ( max-width: $md3 )
 
         &__inner
             flex-direction: column
@@ -30,12 +32,8 @@
             margin: 0px 0px 10px 0px
 
     @media screen and ( max-width: $md4 )
-        &__inner
-            align-items: stretch
-        &__block
-            align-items: flex-start
-
-
+        
+        // tetwe
 
 .social
     display: flex
@@ -79,12 +77,15 @@
     @media screen and ( max-width: $md3 )
         &__link
             padding: 10px 8px
+            font-size: 14px
 
     @media screen and ( max-width: $md4 )
-        
+        align-items: center
+        &__item
+            margin-right: 0
+
         &__link
-            font-size: 14px
             white-space: nowrap
-            padding: 5px 12px 5px 0px
+            padding: 8px
 
         flex-direction: column
