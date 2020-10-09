@@ -42,6 +42,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
 }
 
 main {
@@ -443,7 +444,6 @@ button:focus, input:focus {
 @media screen and (max-width: 768px) {
   .header__input {
     width: 100%;
-    font-size: 14px;
   }
 }
 
@@ -463,6 +463,7 @@ button:focus, input:focus {
   }
   .header__button .button__icon {
     margin-right: 0;
+    width: 18px;
   }
 }
 
@@ -490,7 +491,7 @@ button:focus, input:focus {
   }
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 576px) {
   .header {
     padding: 10px 0px;
   }
