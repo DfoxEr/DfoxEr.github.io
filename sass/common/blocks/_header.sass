@@ -20,30 +20,38 @@
     &__buttons
         display: flex
 
-        @media screen and ( max-width: $md4 )
+    &__input
+
+        @media screen and ( max-width: $md3 )
             width: 100%
-            justify-content: space-between
-            margin-top: 5px
+            font-size: 14px
+
 
     &__button
         margin-left: 10px
 
         @media screen and ( max-width: $md3 )
+            font-size: 14px
+
+        @media screen and ( max-width: $md4 )
             .button__text
                 display: none
             .button__icon
                 margin-right: 0
-        @media screen and ( max-width: $md4 )
-            margin: 0px
-            flex: 0 1 49%
-            padding: 10px 16px
-            font-size: 14px
 
-            .button__text
-                display: block
+    @media screen and ( max-width: $md4 )
+        &__logo
+            order: 1
 
-            .button__icon
-                margin-right: 5px
+        &__buttons
+            order: 2
+            align-items: center
+
+        &__input
+            order: 3
+
+        &__button
+            padding: 11px 16px
 
     @media screen and ( max-width: $md5 )
         padding: 10px 0px
