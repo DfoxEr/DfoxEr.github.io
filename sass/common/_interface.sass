@@ -82,8 +82,7 @@ button:focus, input:focus
     border-radius: 7px
     overflow: hidden
     margin: 8px
-    flex: 1 1 auto
-    max-width: 374px
+    flex: 1 1 384px
     display: flex
     flex-direction: column
 
@@ -120,6 +119,8 @@ button:focus, input:focus
 
     @media screen and ( max-width: $md1 )
         max-width: none
+        flex: 0 1 49%
+        margin: 8px 0px
 
     @media screen and ( max-width: $md2 )
 
@@ -141,7 +142,7 @@ button:focus, input:focus
             min-height: 90px
 
     @media screen and ( max-width: $md4 )
-        
+        flex: 1 1 auto
 
         &__title
             font-size: 22px
@@ -150,6 +151,8 @@ button:focus, input:focus
         &__tag
             font-size: 12px
 
+        &__img
+            width: 100%
 
         .restaurant-info__cost, .restaurant-info__category
             font-size: 12px
