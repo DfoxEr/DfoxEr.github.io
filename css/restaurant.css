@@ -140,9 +140,9 @@ button:focus, input:focus {
   border-radius: 7px;
   overflow: hidden;
   margin: 8px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 384px;
-          flex: 1 1 384px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31.333%;
+          flex: 0 1 31.333%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,6 +543,16 @@ button:focus, input:focus {
 
 .dish-card__text {
   padding: 21px 21px 34px 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .dish-card__title {
@@ -550,7 +560,7 @@ button:focus, input:focus {
 }
 
 .dish-card__ingredients {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
   color: #8C8C8C;
   -o-text-overflow: ellipsis;
@@ -597,7 +607,7 @@ button:focus, input:focus {
   }
   .dish-card__order-btn {
     padding: 6px 12px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
