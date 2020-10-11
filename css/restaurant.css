@@ -387,7 +387,7 @@ button:focus, input:focus {
 
 @media screen and (max-width: 475px) {
   .modal__title {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
