@@ -378,6 +378,7 @@ button:focus, input:focus {
     height: -moz-fit-content;
     height: fit-content;
     border-radius: 0px;
+    margin: 0;
   }
   .modal__title {
     font-size: 32px;
