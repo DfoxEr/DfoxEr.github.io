@@ -21,6 +21,9 @@ body
 
     -webkit-tap-highlight-color: transparent
 
+body.locked
+    overflow: hidden
+
 main
     flex: 1 0 auto
     background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
@@ -220,6 +223,7 @@ button:focus, input:focus
     left: 0
     background: rgba(0, 0, 0, 0.4)
     display: none
+    overflow: auto
 
     &.is-open
         display: flex
@@ -249,15 +253,31 @@ button:focus, input:focus
         
         cursor: pointer
 
+    @media screen and ( max-width: $md4 )
+        &__window
+            padding: 30px 24px
+
+
+        &__title
+            font-size: 32px
+
+        &__close
+            font-size: 44px
+
+        &__header
+            margin-bottom: 30px
+
+    @media screen and ( max-width: $md5 )        
+        &__title
+            font-size: 26px
+
+
+// корзина
+.cart
     &__body
         display: flex
         flex-direction: column
         margin-bottom: 59px
-
-    &__footer
-        display: flex
-        align-items: center
-        justify-content: space-between
 
     &__pricetag
         font-size: 20px
@@ -267,11 +287,52 @@ button:focus, input:focus
         padding: 15px 20px
         border-radius: 5px
 
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        white-space: nowrap
+
     &__buttons
         display: flex
 
     &__order-button
         margin-right: 18px
+
+    @media screen and ( max-width: $md4 )
+        &__body
+            margin-bottom: 30px
+
+        &__footer
+            flex-wrap: wrap
+        
+        &__pricetag
+            width: 100%
+            margin-bottom: 10px
+            text-align: right
+            font-size: 16px
+            padding: 8px 16px
+            background: transparent
+            color: #000000
+            
+            @include fat()
+
+        &__buttons
+            flex: 1
+            justify-content: space-between
+        
+        &__order-button
+            order: 2
+            margin-right: 0
+
+    @media screen and ( max-width: $md5 )
+        &__button
+            font-size: 14px !important
+    
+    @media screen and ( max-width: $md6 )
+        &__body
+            margin-bottom: 10px
+        
 
 
 // заказ в корзине
@@ -295,6 +356,19 @@ button:focus, input:focus
 
         @include fat()
 
+    @media screen and ( max-width: $md4 )
+        flex-wrap: wrap
+        margin-bottom: 10px
+
+        &__name
+            font-size: 16px
+            width: 100%
+
+        &__cost
+            font-size: 18px
+            margin: 0
+
+
 .order-counter
     display: flex
     align-items: center
@@ -306,6 +380,9 @@ button:focus, input:focus
 
     &__button
         background: #FFFFFF
+        display: flex
+        align-items: center
+        justify-content: center
         width: 39px
         height: 32px
         border: 1px solid #40A9FF
@@ -314,3 +391,9 @@ button:focus, input:focus
         border-radius: 2px
         cursor: pointer
         font-size: 18px
+
+    @media screen and ( max-width: $md6 )
+        &__button
+            width: 30px
+            height: 30px
+            font-size: 16px

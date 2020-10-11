@@ -4,11 +4,11 @@ const cartModal = document.querySelector('.modal_cart');
 const cartClose = document.querySelector('#cart-close');
 
 cartButton.addEventListener('click', function(event){
-    cartModal.classList.add("is-open");
+    cartModal.classList.toggle("is-open");
 });
 
 cartClose.addEventListener('click', function(event){
-    cartModal.classList.remove("is-open");
+    cartModal.classList.toggle("is-open");
 });
 
 new WOW().init();
