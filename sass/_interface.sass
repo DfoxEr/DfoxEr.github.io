@@ -1,0 +1,131 @@
+@import "colors";
+
+@import "fonts";
+
+body
+    overflow-x: hidden
+
+button:focus
+    outline: none
+
+.container
+    max-width: 1500px
+    margin: 0 auto
+    padding: 0 15px
+
+    @media screen and ( max-width: 1200px )
+        max-width: 968px
+    
+    @media screen and ( max-width: 992px )
+        max-width: 960px
+
+    @media screen and ( max-width: 768px )
+        max-width: none
+        padding: 0 10px
+
+    
+
+.logo
+    display: flex
+    img
+        max-width: 100%
+
+// slider
+.slider
+    display: flex
+    flex: 1
+    flex-direction: column
+
+    background-image: url('../img/slider-bg.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right -150px center
+
+    &__wrapper
+        display: flex
+        overflow: hidden
+        flex-direction: column
+        flex: 1
+
+    &__dots
+        display: flex
+        flex: 0
+        justify-content: center
+        margin-bottom: 10px
+        width: min-content
+
+    &__dot
+        display: inline-block
+        height: 18px
+        width: 18px
+        border: 1px solid #222222
+        background-color: transparent
+        margin: 10px
+        border-radius: 50%
+        cursor: pointer
+
+        &_active
+            background: #222222
+
+    @media screen and ( max-width: 992px )
+        background-size: cover
+        background-position: left 150px center
+
+
+
+.slide
+    min-height: 550px
+    display: flex
+    justify-content: center
+    flex-direction: column
+
+    display: none
+
+    &_active
+        display: flex
+
+    &__text
+        // smth
+
+    &__title, &__subtitle
+        color: #222222
+
+    &__title
+        font-size: 100px
+        line-height: 1
+        font-weight: 700
+        max-width: 40%
+        margin-bottom: 15px
+
+    &__subtitle
+        font-size: 50px
+        font-weight: 400
+
+
+    @media screen and ( max-width: 768px )
+        &__title
+            font-size: 76px
+        &__subtitle
+            font-size: 38px
+
+    @media screen and ( max-width: 576px )
+        min-height: 400px
+
+    @media screen and ( max-width: 475px )
+        &__title
+            font-size: 50px
+            max-width: none
+            margin-bottom: 5px
+        &__subtitle
+            font-size: 30px
+
+        min-height: 280px
+
+// burger
+.burger
+    width: 40px
+    border: none
+    background: transparent
+
+    &__img
+        max-width: 100%

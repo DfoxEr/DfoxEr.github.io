@@ -1,0 +1,117 @@
+.header
+
+    &__top
+        display: flex
+        align-items: center
+        border-bottom: 2px solid #dedede
+        padding: 24px 0
+
+        &_container
+            display: flex
+            flex: 1
+            align-items: center
+
+
+    &__contacts
+        font-size: 12px
+        color: rgb(102, 102, 102)
+        background-position: left center
+        background-repeat: no-repeat
+        background-size: 15px
+        
+        &_phone
+            background-image: url('../img/phone.png')
+            padding-left: 24px
+            margin-right: 50px
+
+        &_email
+            background-image: url('../img/mail.png')
+            padding-left: 24px
+
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 25px 0
+
+    &__logo
+        // smth
+    
+    &__nav
+        // smth
+    
+    &__menu
+        display: flex
+
+    &__menu-link
+        color: #000000
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1px
+        padding: 15px 25px
+        display: inline-block
+
+
+    &__controls
+        display: flex
+        align-items: center
+    &__control
+        width: 20px
+        height: 20px
+        border: none
+        background-color: transparent
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        cursor: pointer
+        margin-left: 20px
+
+        &_search
+            background-image: url('../img/search.png')
+
+        &_profile
+            background-image: url('../img/user.png')
+
+        &_cart
+            background-image: url('../img/cart.png')
+
+    @media screen and ( max-width: 992px )
+        &__nav
+            display: none
+
+        &__controls
+            margin-left: auto
+            margin-right: 15px
+
+    @media screen and ( max-width: 768px )
+        &__top
+            display: none
+        &__logo
+            width: 180px
+            padding: 10px
+
+    @media screen and ( max-width: 475px )
+        &__control_profile
+            display: none
+        &__control_search
+            display: none
+
+        &__body
+            padding: 15px 0
+
+.cart-dot
+    background: #235eff
+    border: 2px solid white
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    transform: translateX(9px) translateY(9px)
+    
+
+
+.promo
+    display: flex
+
+    &__container
+        flex: 1
