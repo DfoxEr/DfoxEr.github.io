@@ -197,9 +197,6 @@ button:focus {
 }
 
 @media screen and (max-width: 475px) {
-  .slide {
-    min-height: 280px;
-  }
   .slide__title {
     font-size: 50px;
     max-width: none;
