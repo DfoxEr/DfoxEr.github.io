@@ -207,6 +207,19 @@ button:focus {
   }
 }
 
+@media (orientation: landscape) and (max-width: 800px) {
+  .slide {
+    min-height: 260px;
+  }
+  .slide__title {
+    font-size: 60px;
+    margin-bottom: 5px;
+  }
+  .slide__subtitle {
+    font-size: 36px;
+  }
+}
+
 .burger {
   width: 40px;
   border: none;
