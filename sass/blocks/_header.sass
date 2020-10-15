@@ -83,6 +83,10 @@
             margin-left: auto
             margin-right: 25px
 
+    @media (orientation: landscape) and ( max-width: 992px )
+        &__top
+            display: none
+
     @media screen and ( max-width: 768px )
         &__top
             display: none
@@ -98,6 +102,11 @@
 
         &__body
             padding: 15px 0
+
+        margin-bottom: 70px
+
+    @media screen and ( max-width: 325px )
+        margin-bottom: 50px
 
 .cart-dot
     background: #235eff

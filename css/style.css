@@ -214,9 +214,9 @@ button:focus {
   }
 }
 
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 992px) {
   .slide {
-    min-height: 260px;
+    min-height: 400px;
   }
   .slide__title {
     font-size: 60px;
@@ -377,6 +377,12 @@ button:focus {
   }
 }
 
+@media (orientation: landscape) and (max-width: 992px) {
+  .header__top {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header__top {
     display: none;
@@ -388,6 +394,9 @@ button:focus {
 }
 
 @media screen and (max-width: 475px) {
+  .header {
+    margin-bottom: 70px;
+  }
   .header__control_profile {
     display: none;
   }
@@ -396,6 +405,12 @@ button:focus {
   }
   .header__body {
     padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .header {
+    margin-bottom: 50px;
   }
 }
 
@@ -484,6 +499,15 @@ button:focus {
 @media screen and (max-width: 576px) {
   .products__title {
     font-size: 30px;
+  }
+  .products__heading {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .products__heading {
+    margin-bottom: 10px;
   }
 }
 
@@ -653,10 +677,25 @@ button:focus {
 
 .x3-banner_1 {
   background: #f9e1e9;
+  margin-right: 10px;
 }
 
 .x3-banner_2 {
   background: url("/img/banners/banner-bg.jpg") no-repeat center/cover;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .x3-banner {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .x3-banner__title {
+    font-size: 80px;
+  }
 }
 
 .sale-products__title {
@@ -664,7 +703,7 @@ button:focus {
 }
 
 .sale-products__grid {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .sale-products__banners {
@@ -674,4 +713,14 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  .sale-products__banners {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
 }
