@@ -590,6 +590,14 @@ button:focus {
   }
 }
 
+@media (orientation: landscape) and (max-width: 992px) {
+  .product__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 50vh;
+  }
+}
+
 .x3-banner {
   display: -webkit-box;
   display: -ms-flexbox;
