@@ -9,19 +9,19 @@ button:focus
     outline: none
 
 .container
-    max-width: 1500px
+    max-width: 1400px
     margin: 0 auto
-    padding: 0 15px
+    padding: 0 30px
 
     @media screen and ( max-width: 1200px )
-        max-width: 968px
+        max-width: 1140px
     
     @media screen and ( max-width: 992px )
-        max-width: 960px
+        max-width: 968px
 
     @media screen and ( max-width: 768px )
         max-width: none
-        padding: 0 10px
+        padding: 0 15px
 
     
 
@@ -54,18 +54,24 @@ button:focus
         margin-bottom: 10px
         width: min-content
 
+    
     &__dot
-        display: inline-block
-        height: 18px
-        width: 18px
-        border: 1px solid #222222
-        background-color: transparent
-        margin: 10px
-        border-radius: 50%
+        display: flex
+        padding: 10px
         cursor: pointer
+        &-inner
+            display: inline-block
+            height: 18px
+            width: 18px
+            border: 1px solid #222222
+            background-color: transparent
+            border-radius: 50%
+
+            padding: 10px
 
         &_active
-            background: #222222
+            .slider__dot-inner
+                background: #222222
 
     @media screen and ( max-width: 992px )
         background-size: cover
@@ -140,3 +146,18 @@ button:focus
 
     @media screen and ( max-width: 992px )
         display: block
+
+.button
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 12px 16px
+    border: none
+    background: none
+    cursor: pointer
+    font-size: 12px
+
+    font-weight: 700
+
+    &_black
+        background: #222222
+        color: #ffffff

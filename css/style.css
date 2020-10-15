@@ -40,27 +40,27 @@ button:focus {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 
 @media screen and (max-width: 1200px) {
   .container {
-    max-width: 968px;
+    max-width: 1140px;
   }
 }
 
 @media screen and (max-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 968px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .container {
     max-width: none;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -122,17 +122,24 @@ button:focus {
 }
 
 .slider__dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider__dot-inner {
   display: inline-block;
   height: 18px;
   width: 18px;
   border: 1px solid #222222;
   background-color: transparent;
-  margin: 10px;
   border-radius: 50%;
-  cursor: pointer;
+  padding: 10px;
 }
 
-.slider__dot_active {
+.slider__dot_active .slider__dot-inner {
   background: #222222;
 }
 
@@ -235,6 +242,26 @@ button:focus {
   .burger {
     display: block;
   }
+}
+
+.button {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.button_black {
+  background: #222222;
+  color: #ffffff;
+}
+
+.header {
+  margin-bottom: 100px;
 }
 
 .header__top {
@@ -394,4 +421,246 @@ button:focus {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.products__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.products__title {
+  font-size: 40px;
+  color: #222222;
+  line-height: 1;
+}
+
+.products__title::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 4px;
+  background: #222222;
+  display: block;
+}
+
+.products__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.products__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.products__row:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .products__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .products__title {
+    font-size: 30px;
+  }
+}
+
+.product {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 30px;
+}
+
+.product:last-child {
+  margin-right: 0;
+}
+
+.product__img {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+.product__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+}
+
+.product__star {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background: url("/img/star.png") no-repeat center/15px;
+}
+
+.product__name {
+  color: #222222;
+  padding: 10px;
+}
+
+.product__name:hover {
+  text-decoration: underline;
+}
+
+.product__cost {
+  font-size: 24px;
+  color: #222222;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .product {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 47%;
+            flex: 0 1 47%;
+    margin-right: 0;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+  .product__img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product__img {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .product__img {
+    max-width: 100%;
+  }
+}
+
+.x3-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  max-width: 660px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+}
+
+.x3-banner__tag {
+  font-size: 18px;
+  color: #222222;
+  padding: 8px 12px;
+  background: #feecec;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.x3-banner__title {
+  font-size: 100px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.x3-banner__subtitle {
+  line-height: 1;
+  color: #ffffff;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.x3-banner__link {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.x3-banner_1 {
+  background: #f9e1e9;
+}
+
+.x3-banner_2 {
+  background: url("/img/banners/banner-bg.jpg") no-repeat center/cover;
+}
+
+.sale-products__title {
+  margin-bottom: 25px;
+}
+
+.sale-products__grid {
+  margin-bottom: 100px;
+}
+
+.sale-products__banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
