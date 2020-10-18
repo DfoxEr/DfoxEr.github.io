@@ -698,6 +698,21 @@ button:focus {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .x3-banner__title {
+    font-size: 50px;
+  }
+  .x3-banner__tag {
+    font-size: 14px;
+  }
+  .x3-banner__link {
+    font-size: 14px;
+  }
+  .x3-banner_1 {
+    padding: 0;
+  }
+}
+
 .sale-products__title {
   margin-bottom: 25px;
 }
