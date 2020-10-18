@@ -5,6 +5,9 @@
 body
     overflow-x: hidden
 
+    &.locked
+        overflow: hidden
+
 button:focus
     outline: none
 
@@ -139,10 +142,16 @@ button:focus
 
 // burger
 .burger
-    width: 40px
+    width: 42px
     border: none
     background: transparent
     display: none
+    padding: 6px
+    position: relative
+    z-index: 3
+
+    &.active
+        background: #f3f3f3
 
     &__img
         max-width: 100%
@@ -164,3 +173,19 @@ button:focus
     &_black
         background: #222222
         color: #ffffff
+
+// overlay
+
+.overlay
+    position: absolute
+    top: 0
+    left: 0
+    background: #00000080
+    width: 100%
+    height: 100%
+    z-index: 0
+    display: none
+
+    &.show
+        top: 70px
+        display: block
