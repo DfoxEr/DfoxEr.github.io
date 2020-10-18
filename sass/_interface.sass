@@ -73,21 +73,31 @@ button:focus
             background-color: transparent
             border-radius: 50%
 
-            padding: 10px
-
         &_active
             .slider__dot-inner
                 background: #222222
 
     @media screen and ( max-width: 992px )
-        background-size: cover
+        background-size: auto
+        background-position: top right -800px
         &__dots
             align-items: center
             justify-content: center
+            width: 100%
 
     @media screen and ( max-width: 768px )
-        background-position: center	
         backdrop-filter: blur(5px)
+
+    @media screen and ( max-width: 576px )
+        background-position: center left
+        background-size: auto
+    
+    @media screen and ( max-width: 475px )
+        &__dot
+            &-inner
+                height: 13px
+                width: 13px
+
 
 
 
@@ -120,25 +130,35 @@ button:focus
         font-weight: 400
 
     @media screen and ( max-width: 992px )
-        min-height: 400px
+        min-height: 300px
+        padding: 30px
 
-    @media screen and ( max-width: 768px )
         &__title
-            font-size: 76px
+            font-size: 65px
         &__subtitle
-            font-size: 38px
+            font-size: 32px
 
-        padding: 20px
 
     @media screen and ( max-width: 576px )
-        min-height: 300px
+        min-height: 100%
+        height: 200px
 
         &__title
             font-size: 50px
             max-width: none
             margin-bottom: 5px
+            text-align: center
+            max-width: none
+
         &__subtitle
             font-size: 30px
+            text-align: center
+
+    @media screen and ( max-width: 475px )
+        &__title
+            font-size: 40px
+        &__subtitle
+            font-size: 20px
 
 
 
