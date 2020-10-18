@@ -82,17 +82,17 @@
             top: 70px
             left: 0
             width: 100%
-            background: #f9f9f9
+            background: #fbfbfb
             align-items: center
-            border-bottom: 2px solid #ececec
             transition: all 0.2s ease
-            transform: translateY(-100%)
             opacity: 0
             visibility: hidden
             z-index: 1
 
+            max-height: calc(100vh - 70px)
+            overflow: auto
+
             &.is-opened
-                transform: translateY(0)
                 opacity: 1
                 visibility: visible
 

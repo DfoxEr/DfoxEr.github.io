@@ -8,4 +8,5 @@ burger.addEventListener("click",function(e){
     document.querySelector("body").classList.toggle("locked");
 
     document.querySelector(".overlay").classList.toggle("show");
+    window.scrollTo(pageXOffset, 0);
 });
