@@ -5,12 +5,17 @@
         align-items: center
         border-bottom: 2px solid #dedede
         padding: 24px 0
+        background: #fff
+        position: relative
+        z-index: 20
 
     &__container, &__top_container
         display: flex
         flex: 1
         align-items: center
-        margin: 0
+
+    &__container
+        justify-content: space-between
 
 
     &__contacts
@@ -34,6 +39,9 @@
         justify-content: space-between
         align-items: center
         padding: 25px 0
+        position: relative
+        background: #fff
+        z-index: 20
 
     &__logo
         // smth
@@ -79,7 +87,8 @@
     @media screen and ( max-width: 992px )
         &__nav
             position: absolute
-            top: 70px
+            bottom: 0
+            transform: translateY(100%)
             left: 0
             width: 100%
             background: #fbfbfb

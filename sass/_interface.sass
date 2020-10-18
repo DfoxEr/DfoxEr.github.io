@@ -81,7 +81,13 @@ button:focus
 
     @media screen and ( max-width: 992px )
         background-size: cover
-        background-position: left 150px center
+        &__dots
+            align-items: center
+            justify-content: center
+
+    @media screen and ( max-width: 768px )
+        background-position: center	
+        backdrop-filter: blur(5px)
 
 
 
@@ -113,16 +119,20 @@ button:focus
         font-size: 50px
         font-weight: 400
 
+    @media screen and ( max-width: 992px )
+        min-height: 400px
+
     @media screen and ( max-width: 768px )
         &__title
             font-size: 76px
         &__subtitle
             font-size: 38px
 
-    @media screen and ( max-width: 576px )
-        min-height: 400px
+        padding: 20px
 
-    @media screen and ( max-width: 475px )
+    @media screen and ( max-width: 576px )
+        min-height: 300px
+
         &__title
             font-size: 50px
             max-width: none
@@ -130,8 +140,10 @@ button:focus
         &__subtitle
             font-size: 30px
 
+
+
     @media (orientation: landscape) and ( max-width: 992px )
-        min-height: 400px
+        padding: 30px
 
         &__title
             font-size: 60px
@@ -149,6 +161,7 @@ button:focus
     padding: 6px
     position: relative
     z-index: 3
+    cursor: pointer
 
     &.active
         background: #f3f3f3
@@ -174,11 +187,22 @@ button:focus
         background: #222222
         color: #ffffff
 
+    &_yellow
+        background: #eaac00
+        color: #fff
+        letter-spacing: 2px
+        padding: 18px 25px
+
+// секция
+.section
+    margin-bottom: 100px
+
+
 // overlay
 
 .overlay
     position: fixed
-    top: 70px
+    top: 0
     left: 0
     background: #00000080
     width: 100%
@@ -191,3 +215,4 @@ button:focus
     &.show
         opacity: 1
         visibility: visible
+

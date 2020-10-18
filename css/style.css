@@ -156,7 +156,22 @@ button:focus {
 @media screen and (max-width: 992px) {
   .slider {
     background-size: cover;
-    background-position: left 150px center;
+  }
+  .slider__dots {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    background-position: center;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
   }
 }
 
@@ -198,7 +213,16 @@ button:focus {
   font-weight: 400;
 }
 
+@media screen and (max-width: 992px) {
+  .slide {
+    min-height: 400px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .slide {
+    padding: 20px;
+  }
   .slide__title {
     font-size: 76px;
   }
@@ -209,11 +233,8 @@ button:focus {
 
 @media screen and (max-width: 576px) {
   .slide {
-    min-height: 400px;
+    min-height: 300px;
   }
-}
-
-@media screen and (max-width: 475px) {
   .slide__title {
     font-size: 50px;
     max-width: none;
@@ -226,7 +247,7 @@ button:focus {
 
 @media (orientation: landscape) and (max-width: 992px) {
   .slide {
-    min-height: 400px;
+    padding: 30px;
   }
   .slide__title {
     font-size: 60px;
@@ -245,6 +266,7 @@ button:focus {
   padding: 6px;
   position: relative;
   z-index: 3;
+  cursor: pointer;
 }
 
 .burger.active {
@@ -277,9 +299,20 @@ button:focus {
   color: #ffffff;
 }
 
+.button_yellow {
+  background: #eaac00;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 18px 25px;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
 .overlay {
   position: fixed;
-  top: 70px;
+  top: 0;
   left: 0;
   background: #00000080;
   width: 100%;
@@ -310,6 +343,9 @@ button:focus {
           align-items: center;
   border-bottom: 2px solid #dedede;
   padding: 24px 0;
+  background: #fff;
+  position: relative;
+  z-index: 20;
 }
 
 .header__container, .header__top_container {
@@ -322,7 +358,12 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+}
+
+.header__container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__contacts {
@@ -355,6 +396,9 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 25px 0;
+  position: relative;
+  background: #fff;
+  z-index: 20;
 }
 
 .header__menu {
@@ -408,7 +452,10 @@ button:focus {
 @media screen and (max-width: 992px) {
   .header__nav {
     position: absolute;
-    top: 70px;
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
     left: 0;
     width: 100%;
     background: #fbfbfb;
@@ -812,4 +859,125 @@ button:focus {
         -ms-flex-pack: stretch;
             justify-content: stretch;
   }
+}
+
+.special-offer {
+  background: #f3f3f3;
+}
+
+.special-offer__container {
+  padding-right: 0;
+}
+
+.special-offer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.special-offer__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.special-offer__column_1 {
+  max-width: 520px;
+  margin-right: 50px;
+}
+
+.special-offer__column_2 {
+  width: 40%;
+  max-width: 950px;
+}
+
+.special-offer__textblock {
+  padding-bottom: 60px;
+}
+
+.special-offer__tag {
+  background: #c8c290;
+  display: inline-block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.special-offer__title {
+  font-size: 50px;
+  color: #222222;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+.special-offer__name {
+  line-height: 2;
+  font-size: 20px;
+  margin: 0;
+}
+
+.special-offer__cost {
+  font-weight: 900;
+  font-size: 44px;
+  color: #222222;
+  line-height: 1;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.special-offer__image {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.countdown-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 30px;
+  border: 1px solid white;
+  color: #222222;
+  font-weight: 900;
+  max-width: 115px;
+  margin-right: 25px;
+}
+
+.countdown-counter:last-child {
+  margin-right: 0;
+}
+
+.countdown-counter__left {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.countdown-counter__type {
+  font-size: 12px;
+  line-height: 1.2;
 }
