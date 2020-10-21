@@ -263,6 +263,12 @@ body {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .cart i {
+    font-size: 22px;
+  }
+}
+
 .slick {
   overflow: hidden;
 }
@@ -529,5 +535,14 @@ body {
         -ms-flex: 1;
             flex: 1;
     min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding-top: 15px;
+  }
+  .header__logo {
+    font-size: 34px;
   }
 }
