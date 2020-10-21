@@ -23,7 +23,7 @@ $(document).ready(function(){
         adaptiveHeight: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        touchThreshold: 20,
+        touchThreshold: 30,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 10000,
