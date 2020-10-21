@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 
     $('.slider-nav').slick({
-        arrows: false,
+        arrows: true,
         speed: 150,
         adaptiveHeight: true,
         slidesToShow: 4,
@@ -29,11 +29,12 @@ $(document).ready(function(){
         autoplaySpeed: 10000,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 3
                 }
             },
+            
             {
                 breakpoint: 576,
                 settings: {

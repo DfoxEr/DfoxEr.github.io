@@ -522,12 +522,46 @@ body {
 
 .slider-nav {
   overflow: hidden;
+  position: relative;
+  padding: 0 45px;
 }
 
 .slider-nav .slick-list {
   overflow: hidden;
   margin: 0 -40px;
   padding: 0 20px;
+}
+
+.slider-nav .slick-arrow {
+  border: none;
+  background-color: transparent;
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider-nav .slick-arrow:focus {
+  outline: none;
+}
+
+.slider-nav .slick-prev {
+  background-image: url("/img/slider-nav/arrow-left.png");
+  left: 0;
+}
+
+.slider-nav .slick-next {
+  background-image: url("/img/slider-nav/arrow-right.png");
+  right: 0;
 }
 
 .slider-nav .slider-slide {
