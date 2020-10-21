@@ -573,6 +573,7 @@ body {
 
 @media screen and (max-width: 576px) {
   .slider-nav .slider-slide {
+    min-width: 140px;
     margin: 10px;
   }
   .slider-nav .slick-list {
