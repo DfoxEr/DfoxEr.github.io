@@ -31,13 +31,8 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 420,
-                settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2,
+                    variableWidth: true
                 }
             }
         ]

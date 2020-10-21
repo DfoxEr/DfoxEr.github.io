@@ -320,6 +320,7 @@ body
 
     .slider-slide
         margin: 20px
+        padding: 0 20px
         background: red
         border-radius: 5px
         min-height: 80px
@@ -330,6 +331,7 @@ body
         &__title
             color: white
             text-transform: uppercase
+            white-space: nowrap
             letter-spacing: 1px
             font-size: 14px
 
@@ -350,3 +352,8 @@ body
             margin: 10px
         .slick-list
             margin: 0 -10px
+
+    @media screen and ( max-width: 325px )
+        .slider-slide
+            &__title
+                font-size: 12px
