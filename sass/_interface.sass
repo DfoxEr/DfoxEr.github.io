@@ -18,6 +18,7 @@ body
 
     @media screen and ( max-width: 768px )
         max-width: 720px
+        padding: 0 10px
     
     @media screen and ( max-width: 576px )
         max-width: none
@@ -131,7 +132,7 @@ body
     &-track
         display: flex
         overflow: hidden
-
+// Общий класс слайдеров
 .slider
     &-slide
         user-select: none
@@ -140,6 +141,7 @@ body
         &:focus
             outline: none
 
+// Главный слайдер
 .slider-main
     max-width: 860px
     overflow: hidden
@@ -155,6 +157,8 @@ body
         display: flex
         align-items: flex-end
         margin: 0 20px
+        transition: 0.1s
+
 
         &__block
             margin-bottom: 45px
@@ -185,21 +189,54 @@ body
         display: flex
         margin-top: 10px
         margin-left: -5px
+        align-items: center
+        justify-content: center
 
         li
             display: flex
             align-items: center
             justify-content: center
             padding: 5px
+            cursor: pointer
             button
                 font-size: 0
                 border: none
                 outline: none
-                width: 12px
-                height: 12px
+                width: 15px
+                height: 15px
                 background: #e0e0e0
                 border-radius: 50%
+                cursor: pointer
 
         li.slick-active
             button
                 background: #525252
+
+    @media screen and ( max-width: 768px )
+        .slider-slide
+            min-height: 300px
+
+    @media screen and ( max-width: 576px )
+        .slider-slide
+            padding: 20px
+            align-items: center
+
+            &__block
+                margin-bottom: 0
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+
+    @media screen and ( max-width: 425px )
+        .slider-slide
+            min-height: 200px
+
+            &__title
+                font-size: 24px
+
+            &__subtitle
+                font-size: 12px
+
+            &__description
+                font-size: 12px

@@ -3,6 +3,7 @@ $(document).ready(function(){
         waitForAnimate: false,
         dots: true,
         speed: 300,
-        arrows: false
+        arrows: false,
+        adaptiveHeight: true
     });
 });
