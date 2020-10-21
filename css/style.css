@@ -551,7 +551,7 @@ body {
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-size: 14px;
 }
 
