@@ -16,4 +16,31 @@ $(document).ready(function(){
         swipe: false,
         adaptiveHeight: true
     });
+
+    $('.slider-nav').slick({
+        arrows: false,
+        speed: 150,
+        adaptiveHeight: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        touchThreshold: 20,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
 });

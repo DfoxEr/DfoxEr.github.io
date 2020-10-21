@@ -199,7 +199,7 @@ body
         margin-left: -10px
         align-items: center
         justify-content: center
-        position: absolute
+        // position: absolute
 
         li
             display: flex
@@ -224,7 +224,7 @@ body
 
     @media screen and ( max-width: 850px )
         .slider-slide
-            min-height: 300px
+            min-height: 250px
         width: 100%
 
     @media screen and ( max-width: 576px )
@@ -309,3 +309,44 @@ body
 
     @media screen and ( max-width: 850px )
         display: none
+
+// Слайдер - навигация
+.slider-nav
+    overflow: hidden
+    .slick-list
+        overflow: hidden
+        margin: 0 -20px
+        padding: 0 20px
+
+    .slider-slide
+        margin: 20px
+        background: red
+        border-radius: 5px
+        min-height: 80px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &__title
+            color: white
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-size: 14px
+
+        &_1
+            background: url('/img/slider-nav/slide1.png') no-repeat center / cover
+
+        &_2
+            background: url('/img/slider-nav/slide2.png') no-repeat center / cover
+
+        &_3
+            background: url('/img/slider-nav/slide3.png') no-repeat center / cover
+
+        &_4
+            background: url('/img/slider-nav/slide4.png') no-repeat center / cover
+
+    @media screen and ( max-width: 576px )
+        .slider-slide
+            margin: 10px
+        .slick-list
+            margin: 0 -10px
