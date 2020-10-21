@@ -575,16 +575,13 @@ body {
   .slider-nav .slider-slide {
     min-width: 140px;
     margin: 10px;
-    min-height: 60px;
+    min-height: 65px;
+  }
+  .slider-nav .slider-slide__title {
+    font-size: 12px;
   }
   .slider-nav .slick-list {
     margin: 0 -10px;
-  }
-}
-
-@media screen and (max-width: 325px) {
-  .slider-nav .slider-slide__title {
-    font-size: 12px;
   }
 }
 
