@@ -293,7 +293,7 @@ body {
 }
 
 .slider-main {
-  width: 69%;
+  width: 68%;
   position: relative;
 }
 
@@ -358,7 +358,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 10px;
-  margin-left: -5px;
+  margin-left: -10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -378,7 +378,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -386,8 +386,9 @@ body {
   font-size: 0;
   border: none;
   outline: none;
-  width: 13px;
-  height: 13px;
+  padding: 0;
+  width: 11px;
+  height: 11px;
   background: #e0e0e0;
   border-radius: 50%;
   cursor: pointer;
@@ -397,7 +398,7 @@ body {
   background: #525252;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .slider-main {
     width: 100%;
   }
@@ -430,7 +431,7 @@ body {
 
 @media screen and (max-width: 425px) {
   .slider-main .slider-slide {
-    min-height: 240px;
+    min-height: 400px;
   }
   .slider-main .slider-slide__title {
     font-size: 24px;
@@ -514,7 +515,7 @@ body {
   background: url("/img/slider-sync/star.png") no-repeat center/cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .slider-sync {
     display: none;
   }
@@ -610,9 +611,6 @@ body {
   }
   .header__btn_register {
     display: none;
-  }
-  .header__btn_login {
-    background: url("/img/login.png") no-repeat center/22px;
   }
   .header__search {
     -webkit-box-ordinal-group: 5;

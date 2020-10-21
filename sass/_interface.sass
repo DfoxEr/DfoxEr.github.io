@@ -146,7 +146,7 @@ body
 
 // Главный слайдер
 .slider-main    
-    width: 69%
+    width: 68%
     position: relative
 
     .slick-list
@@ -196,7 +196,7 @@ body
     .slick-dots
         display: flex
         margin-top: 10px
-        margin-left: -5px
+        margin-left: -10px
         align-items: center
         justify-content: center
         position: absolute
@@ -205,14 +205,15 @@ body
             display: flex
             align-items: center
             justify-content: center
-            padding: 5px
+            padding: 8px
             cursor: pointer
             button
                 font-size: 0
                 border: none
                 outline: none
-                width: 13px
-                height: 13px
+                padding: 0
+                width: 11px
+                height: 11px
                 background: #e0e0e0
                 border-radius: 50%
                 cursor: pointer
@@ -221,7 +222,7 @@ body
             button
                 background: #525252
 
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 850px )
         .slider-slide
             min-height: 300px
         width: 100%
@@ -240,7 +241,7 @@ body
 
     @media screen and ( max-width: 425px )
         .slider-slide
-            min-height: 240px
+            min-height: 400px
 
             &__title
                 font-size: 24px
@@ -306,5 +307,5 @@ body
                 right: 26px
                 background: url('/img/slider-sync/star.png') no-repeat center / cover
 
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 850px )
         display: none
