@@ -220,7 +220,6 @@ body {
 
 .cart i {
   font-size: 26px;
-  color: #4d4d4d;
   margin-right: 15px;
 }
 
@@ -295,7 +294,6 @@ body {
 .slider-main {
   width: 69%;
   position: relative;
-  margin-right: 20px;
 }
 
 .slider-main .slick-list {
@@ -387,8 +385,8 @@ body {
   font-size: 0;
   border: none;
   outline: none;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   background: #e0e0e0;
   border-radius: 50%;
   cursor: pointer;
@@ -606,7 +604,14 @@ body {
     margin-right: 15px;
   }
   .header__toolbar {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .header__btn_register {
+    display: none;
+  }
+  .header__btn_login {
+    background: url("/img/login.png") no-repeat center/22px;
   }
   .header__search {
     -webkit-box-ordinal-group: 5;
