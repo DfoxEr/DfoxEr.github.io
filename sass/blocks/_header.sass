@@ -1,0 +1,65 @@
+// Header
+.header
+    padding-top: 50px
+    margin-bottom: 50px
+
+    &__logo
+        margin-right: 50px
+
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+    
+    &__toolbar
+        display: flex
+        margin-right: auto
+        margin-left: 20px
+
+    &__btn
+        cursor: pointer
+        display: flex
+        padding: 10px 23px 10px 23px
+        user-select: none
+
+        &:last-child
+            margin-right: 0
+
+        &:hover
+            text-decoration: underline
+
+        &_login
+            background: url('/img/lock.png') no-repeat center left / 13px
+            padding-left: 18px
+
+        &_register
+            background: url('/img/user.png') no-repeat center left / 19px
+
+    @media screen and ( max-width: 900px )
+        &__btn
+            font-size: 0
+            background-position: center
+            height: 40px
+            width: 40px
+
+            &_login
+                background-size: 16px
+
+            &_register
+                background-size: 22px
+
+    @media screen and ( max-width: 768px )
+        &__wrapper
+            flex-wrap: wrap
+
+        &__logo
+            margin-right: 15px
+
+        &__toolbar
+            margin-left: 0
+
+        &__search
+            order: 4
+            margin-top: 10px
+            flex: 1
+            min-width: 100%
