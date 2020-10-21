@@ -420,7 +420,7 @@ body {
 
 @media screen and (max-width: 425px) {
   .slider-main .slider-slide {
-    min-height: 200px;
+    min-height: 240px;
   }
   .slider-main .slider-slide__title {
     font-size: 24px;
