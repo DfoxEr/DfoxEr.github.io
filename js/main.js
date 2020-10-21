@@ -23,7 +23,8 @@ $(document).ready(function(){
         adaptiveHeight: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        touchThreshold: 30,
+        touchThreshold: 100,
+        waitForAnimate: false,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 10000,
@@ -34,9 +35,14 @@ $(document).ready(function(){
                     slidesToShow: 3
                 }
             },
-            
             {
-                breakpoint: 576,
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 475,
                 settings: {
                     variableWidth: true
                 }
