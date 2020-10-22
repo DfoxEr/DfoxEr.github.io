@@ -940,6 +940,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .offer {
+    padding: 20px 0;
+  }
   .offer__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -959,17 +962,32 @@ body {
   .offer__column {
     margin-bottom: 15px;
   }
+  .offer-card_trends {
+    background-position: center right;
+    background-size: 40%;
+  }
   .offer-card_sales {
     width: 100%;
   }
   .offer-card__title {
     font-size: 22px;
+    margin-bottom: 5px;
   }
   .offer-card__subtitle {
     font-size: 12px;
+    margin-bottom: 30px;
   }
   .offer-button {
     padding: 12px 24px;
     font-size: 12px;
+  }
+  .offer__top {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .offer-card_trends {
+    background-position: bottom -50px right;
   }
 }

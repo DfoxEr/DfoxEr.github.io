@@ -150,14 +150,30 @@
             margin-bottom: 15px
 
         &-card
+            
+            &_trends
+                background-position: center right
+                background-size: 40%
+
             &_sales
                 width: 100%
 
             &__title
                 font-size: 22px
+                margin-bottom: 5px
             &__subtitle
                 font-size: 12px
+                margin-bottom: 30px
 
         &-button
             padding: 12px 24px
             font-size: 12px
+
+        padding: 20px 0
+        &__top
+            margin-bottom: 20px
+
+    @media screen and ( max-width: 576px )
+        &-card
+            &_trends
+                background-position: bottom -50px right
