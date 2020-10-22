@@ -137,6 +137,8 @@ body
         overflow: hidden
 // Общий класс слайдеров
 .slider
+    overflow: hidden
+    position: relative
     &-slide
         user-select: none
         cursor: pointer
@@ -147,7 +149,6 @@ body
 // Главный слайдер
 .slider-main    
     width: 68%
-    position: relative
 
     .slick-list
         margin: 0 -10px
@@ -275,45 +276,49 @@ body
         padding: 20px
         position: relative
 
-        &-card
-
-            &__preview
-                display: inline-block
-                margin-bottom: 35px
-                object-fit: cover
-
-            &__title
-                text-transform: uppercase
-                font-weight: 800
-
-            &__subtitle
-                font-size: 14px
-                margin-bottom: 30px
-                display: inline-block
-
-            &__cost
-                font-size: 18px
-                color: #b2b2b2
-
-                &_red
-                    color: #ff0000
-
-            &::before
-                width: 20px
-                height: 20px
-                content: ""
-                position: absolute
-                top: 26px
-                right: 26px
-                background: url('/img/slider-sync/star.png') no-repeat center / cover
-
     @media screen and ( max-width: 850px )
         display: none
 
+// Карточка товара
+.product-card
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column  
+
+    &__preview
+        display: inline-block
+        margin-bottom: 35px
+        object-fit: cover
+
+    &__title
+        text-transform: uppercase
+        font-weight: 800
+
+    &__subtitle
+        font-size: 14px
+        margin-bottom: 30px
+        display: inline-block
+
+    &__cost
+        font-size: 18px
+        color: #b2b2b2
+
+        &_red
+            color: #ff0000
+
+    &::before
+        width: 20px
+        height: 20px
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        background: url('/img/slider-sync/star.png') no-repeat center / cover
+
 // Слайдер - навигация
 .slider-nav
-    overflow: hidden
-    position: relative
     padding: 0 50px
     .slick-list
         overflow: hidden
@@ -391,3 +396,17 @@ body
 
         .slick-list
             margin: 0 -10px
+
+// Слайдер с новинками
+.slider-new
+    display: flex
+    flex-direction: column
+    
+    .slick-list
+        margin: 0 -10px
+
+
+    .slider-slide
+        margin: 0 10px
+        padding: 25px
+        background: #fff

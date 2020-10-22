@@ -80,7 +80,7 @@
             background-image: url('/img/offer/block1.png')
             background-repeat: no-repeat
             background-size: contain
-            background-position: bottom -100px right -40px
+            background-position: bottom -140px right -40px
 
         &_sales
             align-items: center
@@ -177,3 +177,13 @@
         &-card
             &_trends
                 background-position: bottom -50px right
+
+    @media screen and ( max-width: 475px )
+        &-card
+            padding: 30px 20px
+
+    @media screen and ( max-width: 425px )
+        &-card
+            &_trends
+                background-size: 180px
+                background-position: bottom -90px right -45px

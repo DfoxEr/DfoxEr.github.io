@@ -52,4 +52,14 @@ $(document).ready(function(){
         ]
     });
 
+    $('.slider-new').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        speed: 150,
+        adaptiveHeight: true,
+        touchThreshold: 1000
+    });
+
 });
