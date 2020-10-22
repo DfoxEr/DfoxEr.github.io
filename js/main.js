@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $('.slider-nav').slick({
         arrows: true,
-        speed: 150,
+        speed: 120,
         adaptiveHeight: true,
         slidesToShow: 4,
         slidesToScroll: 1,
