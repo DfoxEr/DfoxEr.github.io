@@ -115,6 +115,10 @@
                 background-image: url('/img/offer/block4.png')
 
     @media screen and ( max-width: 768px )
+
+        &__row:nth-child(2)
+            display: none
+
         &-card
             &-mini
                 &_1, &_2
@@ -133,7 +137,7 @@
         &__column
             flex-direction: row
 
-    @media screen and ( max-width: 576px )
+    @media screen and ( max-width: 700px )
         &__body
             flex-direction: column
 
@@ -148,3 +152,12 @@
         &-card
             &_sales
                 width: 100%
+
+            &__title
+                font-size: 22px
+            &__subtitle
+                font-size: 12px
+
+        &-button
+            padding: 12px 24px
+            font-size: 12px

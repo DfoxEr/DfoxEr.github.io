@@ -916,6 +916,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .offer__row:nth-child(2) {
+    display: none;
+  }
   .offer-card-mini_1, .offer-card-mini_2 {
     display: none;
   }
@@ -936,7 +939,7 @@ body {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
   .offer__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -958,5 +961,15 @@ body {
   }
   .offer-card_sales {
     width: 100%;
+  }
+  .offer-card__title {
+    font-size: 22px;
+  }
+  .offer-card__subtitle {
+    font-size: 12px;
+  }
+  .offer-button {
+    padding: 12px 24px;
+    font-size: 12px;
   }
 }
