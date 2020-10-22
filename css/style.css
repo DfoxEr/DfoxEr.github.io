@@ -976,6 +976,9 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .offer__body {
+    padding: 0 20px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -999,7 +1002,7 @@ body {
             flex-direction: column;
   }
   .offer__column {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .offer-card_trends {
     background-position: center right;
@@ -1041,6 +1044,12 @@ body {
   .offer-card_trends {
     background-size: 180px;
     background-position: bottom -90px right -45px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .offer__body {
+    padding: 0 10px;
   }
 }
 
