@@ -547,8 +547,6 @@ body {
 
 .slider-nav .slick-list {
   overflow: hidden;
-  margin: 0 -40px;
-  padding: 0 20px;
 }
 
 .slider-nav .slick-arrow {

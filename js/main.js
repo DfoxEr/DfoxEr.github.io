@@ -42,7 +42,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 3,
                     arrows: true,
-                    centerMode: true,
+                    centerMode: false,
                     variableWidth: false
                 }
             },
@@ -57,7 +57,7 @@ $(document).ready(function(){
                 settings: {
                     arrows: false,
                     variableWidth: true,
-                    centerMode: true,
+                    centerMode: false,
                     slidesToShow: 1
                 }
             }
