@@ -26,27 +26,39 @@ $(document).ready(function(){
         touchThreshold: 1000,
         waitForAnimate: false,
         infinite: true,
-        autoplay: true,
-        autoplaySpeed: 10000,
         responsive: [
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    arrows: false,
+                    slidesToShow: 3,
+                    centerMode: true,
+                    variableWidth: false
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    arrows: true,
+                    centerMode: true,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    arrows: false
                 }
             },
             {
                 breakpoint: 425,
                 settings: {
+                    arrows: false,
                     variableWidth: true,
-                    arrows: false
+                    centerMode: true,
+                    slidesToShow: 1
                 }
             }
         ]

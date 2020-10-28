@@ -640,9 +640,6 @@ body {
   .slider-nav .slider-slide__title {
     font-size: 12px;
   }
-  .slider-nav .slick-list {
-    margin: 0 -10px;
-  }
 }
 
 .slider-new {
@@ -976,9 +973,6 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .offer__body {
-    padding: 0 20px;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -1044,12 +1038,6 @@ body {
   .offer-card_trends {
     background-size: 180px;
     background-position: bottom -90px right -45px;
-  }
-}
-
-@media screen and (max-width: 325px) {
-  .offer__body {
-    padding: 0 10px;
   }
 }
 
