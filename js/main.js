@@ -31,9 +31,8 @@ $(document).ready(function(){
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
-                    arrows: false,
-                    slidesToShow: 3,
-                    centerMode: true,
+                    arrows: true,
+                    centerMode: false,
                     variableWidth: false
                 }
             },
@@ -49,7 +48,8 @@ $(document).ready(function(){
             {
                 breakpoint: 576,
                 settings: {
-                    arrows: false
+                    arrows: false,
+                    variableWidth: true
                 }
             },
             {

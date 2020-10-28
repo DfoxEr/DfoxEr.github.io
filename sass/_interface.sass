@@ -319,7 +319,8 @@ body
 
 // Слайдер - навигация
 .slider-nav
-    padding: 0 50px
+    overflow: hidden
+    padding: 0 40px
     .slick-list
         overflow: hidden
 
@@ -381,10 +382,9 @@ body
         &_4
             background: url('/img/slider-nav/slide4.png') no-repeat center / cover
 
-    @media screen and ( max-width: 768px )
-        padding: 0
 
-    @media screen and ( max-width: 576px )
+
+    @media screen and ( max-width: 768px )
         .slider-slide
             min-width: 140px
             margin: 10px
@@ -392,6 +392,14 @@ body
 
             &__title
                 font-size: 12px
+
+        .slick-arrow
+            width: 30px
+        
+        padding: 0 30px
+
+    @media screen and ( max-width: 576px )
+        padding: 0
 
 
 // Слайдер с новинками

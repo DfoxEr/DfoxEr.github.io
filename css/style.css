@@ -542,7 +542,8 @@ body {
 }
 
 .slider-nav {
-  padding: 0 50px;
+  overflow: hidden;
+  padding: 0 40px;
 }
 
 .slider-nav .slick-list {
@@ -625,11 +626,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .slider-nav {
-    padding: 0;
+    padding: 0 30px;
   }
-}
-
-@media screen and (max-width: 576px) {
   .slider-nav .slider-slide {
     min-width: 140px;
     margin: 10px;
@@ -637,6 +635,15 @@ body {
   }
   .slider-nav .slider-slide__title {
     font-size: 12px;
+  }
+  .slider-nav .slick-arrow {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slider-nav {
+    padding: 0;
   }
 }
 
