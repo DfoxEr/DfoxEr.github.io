@@ -40,11 +40,14 @@
             background-position: bottom right -290px
 
         &__title
-            margin-bottom: 15px
+            display: inline
+            background: #fff
             @include semiBold()
 
         &__subtitle
             font-size: 24px
+            margin-top: 15px
+            display: block
 
         &__button
             padding: 15px 25px
@@ -64,8 +67,4 @@
             margin-bottom: 15px
 
         &__body
-            background-position: bottom -30px right -250px
-
-    @media screen and ( max-width: 321px )
-        &__body
-            background-position: bottom -30px right -320px
+            background-position: bottom right -252px
