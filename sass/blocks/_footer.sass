@@ -1,0 +1,89 @@
+.footer
+    background: #262626
+    padding: 35px 0
+
+    &__body
+        // smth
+    
+    &__top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+
+    &__logo
+        .logo-text
+            color: #fff
+
+        .logo-smalltext
+            color: #b3b3b3 
+
+    &-payments
+        display: flex
+
+        &__payment
+            margin-right: 25px
+
+            &:last-child
+                margin-right: 0
+
+    &-contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+        &__phone
+            font-size: 18px
+            color: #ffffff
+
+            @include semiBold()
+
+        &__email
+            font-size: 14px
+            color: #ffffff
+            border-bottom: 1px dashed white
+
+    &__copyright
+        color: #767676
+        font-size: 14px
+
+    @media screen and ( max-width: 788px )
+        &-payments
+            display: none
+
+    @media screen and ( max-width: 576px )
+        &__body
+            padding: 0 20px
+
+        padding: 25px 0
+
+    @media screen and ( max-width: 425px )
+        &__top, &__bottom
+            flex-direction: column
+            align-items: center
+
+        &__logo
+            text-align: center
+            margin-bottom: 10px
+
+        &-contacts
+            align-items: center
+
+        &__copyright
+            order: 2
+
+        &__social
+            margin-bottom: 10px
+
+// Соц сети
+
+.social
+    &__link
+        margin-right: 3px
+        display: inline-block
+        height: 25px
+        &:last-child
+            margin-right: 0
