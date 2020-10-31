@@ -126,64 +126,6 @@ body
     padding: 70px
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
 
-    &-main
-        display: flex
-        flex-direction: column
-        flex: 1
-        background: url('/img/form-main.png') no-repeat center right -20px / contain
-        background-color: #ffffff
-        // transform: translateY(-80px)
-
-        .form__row
-            &_2
-                justify-content: stretch
-
-        &__checkbox
-            margin-right: 30px
-            
-        @media screen and ( max-width: 992px )
-            background-image: none
-
-        @media screen and ( max-width: 800px )
-            padding: 50px
-            background-position: center right -300px
-            transform: translateY(-45px)
-
-            .form__label
-                font-size: 16px
-
-            .form__input, .form-select
-                height: 50px
-
-            .form__row
-                flex-direction: column
-                flex: 1
-                margin-bottom: 0
-
-                .form__group
-                    flex: 1
-                    display: flex
-                    width: 100%
-                    margin-bottom: 20px
-
-                &_2
-                    margin-bottom: 20px
-                    display: flex
-                    flex-direction: row
-
-            .form__subtitle
-                font-size: 18px
-
-        @media screen and ( max-width: 576px )
-            padding: 35px 26px
-
-            .form__title
-                margin-bottom: 10px
-                font-size: 26px
-
-            .form__subtitle
-                font-size: 16px
-
 
     &__title
         font-size: 25px

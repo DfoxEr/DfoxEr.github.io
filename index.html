@@ -15,8 +15,8 @@
     
     <main>
         <header class="header">
-            <div class="container">
-                <div class="header__body">
+            <div class="header__body">
+                <div class="container header__container">
                     <div class="burger header__burger">
                         <button class="burger-button">
                             <span class="burger-line"></span>
@@ -29,11 +29,6 @@
                         <h3 class="logo-text">Сибирские мастера</h3>
                         <span class="logo-smalltext">ведущий производитель окон ПВХ</span>
                     </a>
-    
-                    <!-- <div class="header-contacts">
-                        <a href="/" class="header-contacts__phone">+7 (3812) 59-26-92</a>
-                        <span class="header-contacts__schedule">без выходных 9-21</span>
-                    </div> -->
     
                     <div class="header-contacts">
                         <a href="tel:+73812592692" class="header-contacts__phone">+7 (3812) 59-26-92</a>
@@ -81,6 +76,69 @@
             </div>
         </header>
         <!-- /.header -->
+
+
+        <!-- <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <div class="burger header__burger">
+                        <button class="burger-button">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </button>
+                    </div>
+    
+                    <a class="logo header__logo" href="/">
+                        <h3 class="logo-text">Сибирские мастера</h3>
+                        <span class="logo-smalltext">ведущий производитель окон ПВХ</span>
+                    </a>
+    
+                    <div class="header-contacts">
+                        <a href="tel:+73812592692" class="header-contacts__phone">+7 (3812) 59-26-92</a>
+                        <a class="header-contacts__email" href="/">dfox.cup@yandex.ru</a>
+                    </div>
+    
+                    <button class="button button-o header__button">
+                        заказать звонок
+                    </button>
+    
+                    <nav class="header-nav header-nav_hidden">
+                        <div class="container header-nav__wrapper">
+                            <ul class="header-menu">
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">главная</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">продукция</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">каталог</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">примеры работ</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">примерка изображений</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">стоимость диллерам</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">о скинали</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header> -->
 
     
         <section class="hero">
@@ -147,7 +205,7 @@
                             </div>
 
                             <div class="form__group">
-                                <input type="text" placeholder="Ваш телефон" class="form__input" name="phone">
+                                <input type="text" placeholder="Ваш телефон" class="form__input input-phone" name="phone">
                             </div>
 
                             <div class="form__group">
@@ -238,55 +296,89 @@
         </section>
         <!-- ./section-stages -->
 
-        <footer class="footer">
+        <section class="section section-raschet">
             <div class="container">
-                <div class="footer__body">
-                    <div class="footer__top">
-                        <a class="logo footer__logo" href="/">
-                            <h3 class="logo-text">Сибирские мастера</h3>
-                            <span class="logo-smalltext">ведущий производитель окон ПВХ</span>
-                        </a>
+                <div class="section__body">
+                    <form action="#" method="POST" class="form form-raschet">
+                        <h2 class="form__title">сстались вопросы?</h2>
+                        <span class="form__subtitle">заполните форму и мы <strong>перезвоним</strong> Вам</span>
 
-                        <div class="footer-payments">
-                            <div class="footer-payments__payment">
-                                <img src="/img/payment/webmoney.png" alt="" class="footer-payments__img">
+                        <div class="form__row">
+
+                            <div class="form__group">
+                                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
                             </div>
 
-                            <div class="footer-payments__payment">
-                                <img src="/img/payment/yandexmoney.png" alt="" class="footer-payments__img">
+                            <div class="form__group">
+                                <input type="text" class="form__input input-phone" name="phone" placeholder="Ваш телефон">
                             </div>
 
-                            <div class="footer-payments__payment">
-                                <img src="/img/payment/mastercard.png" alt="" class="footer-payments__img">
-                            </div>
 
-                            <div class="footer-payments__payment">
-                                <img src="/img/payment/visa.png" alt="" class="footer-payments__img">
+                            <div class="form__group">
+                                <input type="submit" value="Отправить" class="button button-primary form__submit">
                             </div>
                         </div>
-
-                        <div class="footer-contacts">
-                            <a href="tel:+73812592692" class="footer-contacts__phone">+7 (3812) 59-26-92</a>
-                            <a class="footer-contacts__email" href="/">dfox.cup@yandex.ru</a>
-                        </div>
-                    </div>
-
-                    <div class="footer__bottom">
-                        <a href="https://vk.com/beregichestsmolodyayeayeayeaye" class="footer__copyright">© Glupin</a>
-
-                        <div class="social footer__social">
-                            <a href="/" class="social__link"><img src="/img/social/twitter.png" alt="twitter" class="social__icon"></a>
-                            <a href="/" class="social__link"><img src="/img/social/facebook.png" alt="facebook" class="social__icon"></a>
-                            <a href="/" class="social__link"><img src="/img/social/vk.png" alt="vk" class="social__icon"></a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </footer>
-        <!-- /.footer -->
+        </section>
 
     </main>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <div class="footer__top">
+                    <a class="logo footer__logo" href="/">
+                        <h3 class="logo-text">Сибирские мастера</h3>
+                        <span class="logo-smalltext">ведущий производитель окон ПВХ</span>
+                    </a>
+
+                    <div class="footer-payments">
+                        <div class="footer-payments__payment">
+                            <img src="/img/payment/webmoney.png" alt="" class="footer-payments__img">
+                        </div>
+
+                        <div class="footer-payments__payment">
+                            <img src="/img/payment/yandexmoney.png" alt="" class="footer-payments__img">
+                        </div>
+
+                        <div class="footer-payments__payment">
+                            <img src="/img/payment/mastercard.png" alt="" class="footer-payments__img">
+                        </div>
+
+                        <div class="footer-payments__payment">
+                            <img src="/img/payment/visa.png" alt="" class="footer-payments__img">
+                        </div>
+                    </div>
+
+                    <div class="footer-contacts">
+                        <a href="tel:+73812592692" class="footer-contacts__phone">+7 (3812) 59-26-92</a>
+                        <a class="footer-contacts__email" href="/">dfox.cup@yandex.ru</a>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <a href="https://vk.com/beregichestsmolodyayeayeayeaye" class="footer__copyright">© Glupin</a>
+
+                    <div class="social footer__social">
+                        <a href="/" class="social__link"><img src="/img/social/twitter.png" alt="twitter" class="social__icon"></a>
+                        <a href="/" class="social__link"><img src="/img/social/facebook.png" alt="facebook" class="social__icon"></a>
+                        <a href="/" class="social__link"><img src="/img/social/vk.png" alt="vk" class="social__icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Подключение maskedInput -->
+    <script src="/js/jquery.maskedinput.min.js"></script>
+
+    <!-- Подключение нашего скрипта -->
     <script src="/js/main.js"></script>
 
 </body>

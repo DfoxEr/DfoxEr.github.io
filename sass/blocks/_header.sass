@@ -3,41 +3,42 @@
     background: #ffffff
     position: relative
     z-index: 100
-    border-bottom: 2px solid #f3f3f3
     transition: 0.2s
+    min-height: 82px
+
+    &__container
+        flex: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
 
     &__logo
         margin-right: auto
     
-    &_fixed
-        position: fixed
-        width: 100%
-        top: 0
-        left: 0
-        transition: 0.2s
-
-        .header__body
-            min-height: 65px
-            overflow: hidden
-
-        .header-nav
-            transform: translateY(65px)
-            max-height: 40px
-
-        .header__burger
-            align-self: normal
-            padding: 0 24px
-
-            .burger-button
-                padding: 0
-
-        
 
     &__body
         display: flex
-        align-items: center
         min-height: 82px
-        justify-content: space-between
+        transition: 0.2s
+        background: #fff
+        border-bottom: 2px solid #f3f3f3
+
+        &_fixed
+            position: fixed
+            width: 100%
+            min-height: 70px
+
+            .burger
+                align-self: normal
+            
+                &-button
+                    padding: 0 24px
+
+            .header-nav
+                transform: translateY(70px)
+
+                &_hidden
+                    transform: translateY(0)
         
     &-contacts
         display: flex
@@ -115,6 +116,8 @@
             max-height: none
     
     @media screen and ( max-width: 768px )
+        min-height: 70px
+
         &-contacts
             display: none
 
