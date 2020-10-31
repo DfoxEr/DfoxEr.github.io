@@ -25,7 +25,7 @@ const animDuration = 200;
 
 const header = document.querySelector(".header");
 
-const offset = header.offsetTop;
+const offset = header.offsetTop + header.clientHeight;
 
 window.addEventListener("scroll", windowOnScroll);
 
@@ -53,6 +53,6 @@ zamerBtn.addEventListener("click", onHeroBtnClick);
 function onHeroBtnClick() {
     zamerForm.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'center'
     });
 }
