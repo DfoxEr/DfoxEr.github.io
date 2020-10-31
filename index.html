@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>скинали</title>
+</head>
+<body>
+    
+    <main>
+        <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <div class="burger header__burger">
+                        <button class="burger-button">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </button>
+                    </div>
+    
+                    <a class="logo header__logo" href="/">
+                        <h3 class="logo-text">Сибирские мастера</h3>
+                        <span class="logo-smalltext">ведущий производитель окон ПВХ</span>
+                    </a>
+    
+                    <!-- <div class="header-contacts">
+                        <a href="/" class="header-contacts__phone">+7 (3812) 59-26-92</a>
+                        <span class="header-contacts__schedule">без выходных 9-21</span>
+                    </div> -->
+    
+                    <div class="header-contacts">
+                        <a href="tel:+73812592692" class="header-contacts__phone">+7 (3812) 59-26-92</a>
+                        <a class="header-contacts__email" href="/">dfox.cup@yandex.ru</a>
+                    </div>
+    
+                    <button class="button button-o header__button">
+                        заказать звонок
+                    </button>
+    
+                    <nav class="header-nav header-nav_hidden">
+                        <div class="container header-nav__wrapper">
+                            <ul class="header-menu">
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">главная</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">продукция</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">каталог</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">примеры работ</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">примерка изображений</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">стоимость диллерам</a>
+                                </li>
+        
+                                <li class="header-menu__item">
+                                    <a href="/" class="header-menu__link">о скинали</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- /.header -->
+
+    
+        <section class="hero">
+            <div class="container">
+                <div class="hero__body">
+                    <div class="hero__block">
+                        <h1 class="hero__title">Гарантия<br> минимальной цены<br> на окна ПВХ</h1>
+                        <span class="hero__subtitle">от 3 000 р/м2</span>
+
+                        <button class="button button-primary hero__button">записаться на замер</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer">
+            <div class="container">
+                <div class="offer__body">
+                    <form action="#" method="POST" class="form form-main">
+                        <h2 class="form__title">оставьте заявку на рассчет</h2>
+                        <span class="form__subtitle">и получите скидку <strong>30%</strong> на изготовление скинали или фартука для кухни</span>
+
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="" class="form__label">Вид стекла</label>
+                                <select name="windowType" id="windowType" class="form-select">
+                                    <option value="hard" class="form-select__option">Тяжелое</option>
+                                    <option value="soft" class="form-select__option">Легкое</option>
+                                    <option value="Для тебя" class="form-select__option">Блять</option>
+                                </select>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="" class="form__label">Ширина, см</label>
+                                <input type="text" class="form__input" name="width">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="" class="form__label">Высота, см</label>
+                                <input type="text" class="form__input" name="height">
+                            </div>
+                        </div>
+
+                        <div class="form__row form__row_2">
+                            <div class="checkbox form-main__checkbox">  
+                                <label for="installation" class="checkbox__label">
+                                    <input type="checkbox" id="installation" name="installation" class="checkbox__checkbox">
+                                    <span class="checkbox__text">Монтаж</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox form-main__checkbox">  
+                                <label for="delivery" class="checkbox__label">
+                                    <input type="checkbox" id="delivery" name="delivery" class="checkbox__checkbox">
+                                    <span class="checkbox__text">Доставка</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__row">
+                            <div class="form__group">
+                                <input type="text" placeholder="Ваше имя" class="form__input" name="name">
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" placeholder="Ваш телефон" class="form__input" name="phone">
+                            </div>
+
+                            <div class="form__group">
+                                <input type="submit" value="ПОЛУЧИТЬ СКИДКУ" class="button button-primary form__submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- /.offer -->
+    </main>
+
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

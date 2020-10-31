@@ -1,0 +1,258 @@
+
+// цвета
+$primary: #5986e3
+
+// Тело сайта
+body
+    font-family: 'Proxima Nova', sans-serif
+    transition: 0.2s
+    overflow-x: hidden
+
+    &.locked
+        overflow-y: hidden
+
+// Контейнер
+.container
+    max-width: 1170px
+    margin: 0 auto
+    padding: 0 15px
+
+    @media screen and ( max-width: 1200px )
+        max-width: 960px
+
+    @media screen and ( max-width: 992px )
+        max-width: 860px
+
+    @media screen and ( max-width: 768px )
+        max-width: 100%
+
+    @media screen and ( max-width: 576px )
+        padding: 0
+
+
+// Кнопка меню
+.burger
+    display: flex
+    cursor: pointer
+    border-left: 1px solid #ede6f8
+    border-right: 1px solid #ede6f8
+    margin-right: 30px
+
+    &-button
+        display: flex
+        flex-direction: column
+        padding: 31px 24px
+        border: none
+        background-color: transparent
+        cursor: inherit
+        align-items: center
+        justify-content: center
+
+        &:focus
+            outline: none !important
+    
+    &-line
+        height: 3px
+        width: 24px
+        background: $primary
+        margin-bottom: 5px
+        border-radius: 1px
+
+        &:last-child
+            margin-bottom: 0
+
+    &_active
+        .burger-line
+            background: #a7bff0
+
+// Логотип
+.logo
+    display: flex
+    flex-direction: column
+    margin-right: auto
+
+    &-text
+        text-transform: uppercase
+        color: #262626
+        font-size: 18px
+        margin-bottom: 1px
+        line-height: 1.3
+
+    &-smalltext
+        font-size: 14px
+        color: #6b6b6b
+
+// Кнопка
+.button[type="submit"]
+    font-weight: 600
+.button
+    display: flex
+    border: none
+    background-color: transparent
+    cursor: pointer
+    transition: 0.1s
+    font-size: 14px
+    letter-spacing: 0.5px
+    @include semiBold()
+
+
+    &:focus
+        outline: none
+
+    &-o
+        padding: 15px 20px
+        border: 2px solid #507fe1
+        color: #507fe1
+        text-transform: uppercase
+
+        &:hover
+            color: #ffffff
+            background: #507fe1
+
+
+    &-primary
+        padding: 20px 35px
+        background: #507fe1
+        color: #ffffff
+        text-transform: uppercase
+        border: 2px solid #507fe1
+
+        &:active
+            background: #416ac0
+            border: 2px solid #416ac0
+
+
+
+// формы
+.form
+    padding: 70px
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
+
+    &-main
+        display: flex
+        flex-direction: column
+        flex: 1
+        background: url('/img/form-main-bg.png') no-repeat center right / contain
+        background-color: #ffffff
+        transform: translateY(-80px)
+
+        .form__row
+            &_2
+                justify-content: stretch
+
+        &__checkbox
+            margin-right: 30px
+
+        @media screen and ( max-width: 576px )
+            transform: translateY(0)
+
+    &__title
+        font-size: 25px
+        text-transform: uppercase
+        margin-bottom: 25px
+
+        @include bold()
+
+    &__subtitle
+        font-size: 21px
+        margin-bottom: 40px
+
+    &__row
+        display: flex
+        flex: 1
+        justify-content: space-between
+        margin-bottom: 20px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__label
+        font-size: 17px
+        margin-bottom: 10px
+
+    &__group
+        display: flex
+        flex-direction: column
+        width: 33.2%
+
+    &__input, &-select,
+        height: 65px
+        padding: 0 15px
+        font-size: 16px
+        font-family: inherit
+
+    &__input:focus::-webkit-input-placeholder 
+        color: transparent
+
+
+    &__input:focus::-moz-placeholder 
+        color: transparent
+
+    &__input:focus:-moz-placeholder 
+        color: transparent
+
+
+    &__input:focus:-ms-input-placeholder 
+        color: transparent
+
+
+    &-select
+        border: 1px solid #dddddd
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        cursor: pointer
+        background: url('/img/select-arrow.png') no-repeat center right 20px
+
+        &:focus
+            outline: none
+
+    &__input
+        border: 1px solid #dddddd
+        
+
+        &:focus
+            outline: none
+
+    &__submit
+        justify-content: center
+        align-items: center
+        height: 100%
+
+// чекбокс
+.checkbox
+    font-size: 16px
+
+    &__checkbox
+        display: none
+
+        &:checked ~ .checkbox__text::after
+            background: url('/img/checkbox-tick.png') no-repeat center / contain
+            // transform: scale(1)
+
+    &__label
+        display: flex
+        position: relative
+        align-items: center
+        cursor: pointer
+        user-select: none
+
+    &__text
+        display: flex
+        align-items: center
+        &::before
+            width: 20px
+            height: 20px
+            content: ""
+            background: transparent
+            border: 1px solid #dddddd
+            display: inline-block
+            margin-right: 10px
+
+        &::after
+            position: absolute
+            width: 18px
+            height: 18px
+            content: ""
+            top: 2px
+            left: 2px

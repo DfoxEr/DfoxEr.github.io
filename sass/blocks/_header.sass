@@ -1,0 +1,166 @@
+// Header
+.header
+    background: #ffffff
+    position: relative
+    z-index: 100
+    border-bottom: 2px solid #f3f3f3
+    transition: 0.2s
+    
+    &_fixed
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        border-bottom: 1px solid #e0e0e0
+        transition: 0.2s
+
+        .header__body
+            min-height: 65px
+            overflow: hidden
+
+        .header-nav
+            transform: translateY(65px)
+            max-height: 40px
+
+        .header__burger
+            align-self: normal
+            padding: 0 20px
+
+            .burger-button
+                padding: 0
+
+        
+
+    &__body
+        display: flex
+        align-items: center
+        min-height: 82px
+        justify-content: space-between
+        
+    &-contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        margin-right: 40px
+
+        &__phone
+            font-size: 18px
+            color: #1c1c1c
+            @include semiBold()
+
+        &__schedule, &__email
+            font-size: 14px
+            color: #7b7b79
+
+        &__email
+            border-bottom: 1px dashed gray
+            color: #7b7b79
+
+    &-nav
+        position: absolute
+        top: 0
+        opacity: 1
+        z-index: -1
+        display: flex
+        left: 0
+        width: 100%
+        background: #5986e3
+        max-height: 50px
+        align-items: center
+        transition: transform 0.2s, opacity 0.15s
+        transform: translateY(82px)
+        z-index: 5
+
+        &__wrapper
+            flex: 1
+
+        &_hidden
+            transform: translateY(0)
+            opacity: 0
+            visibility: hidden
+
+    &-menu
+        display: flex
+        flex: 1
+        justify-content: space-between
+        padding-left: 104px
+        padding-right: 15px
+
+        &__item
+            // smth
+
+        &__link
+            display: inline-block
+            padding: 18px 0
+            text-transform: capitalize
+            color: #ffffff
+
+            @include light()
+
+    @media screen and ( max-width: 992px )
+        &-menu
+            padding-left: 0
+            padding-right: 0
+
+    @media screen and ( max-width: 850px )
+        &-menu
+            flex-direction: column
+
+        &-nav
+            max-height: 100%
+            display: flex
+            padding-left: 104px
+            max-height: none
+    
+    @media screen and ( max-width: 768px )
+        &-contacts
+            display: none
+
+        &__body
+            min-height: 70px
+
+        &__burger
+            align-self: normal
+            .burger-button
+                padding: 0 20px
+
+        &-nav
+            transform: translateY(70px)
+            padding-left: 94px
+
+        &-menu
+            &__link
+                display: flex
+                flex: 1
+
+    @media screen and ( max-width: 576px )
+        &__body
+            padding-right: 10px
+
+        &__burger
+            margin-right: 15px
+
+        &__button
+            padding: 12px 15px
+            font-size: 12px
+
+        &__logo
+            .logo-text
+                font-size: 16px
+            .logo-smalltext
+                font-size: 14px
+
+        &-nav
+            padding-left: 10px
+
+    @media screen and ( max-width: 500px )
+        &__logo
+            .logo-smalltext
+                display: none
+        &__button
+            white-space: nowrap
+            margin-left: 20px
+
+    @media screen and ( max-width: 375px )
+        &__logo
+            display: none
