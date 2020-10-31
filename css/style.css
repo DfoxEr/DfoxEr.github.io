@@ -201,7 +201,6 @@ body.locked {
   -o-transition: 0.1s;
   transition: 0.1s;
   font-size: 14px;
-  letter-spacing: 0.5px;
   font-weight: 500;
 }
 
