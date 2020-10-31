@@ -716,7 +716,7 @@ body.locked {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 10px 0 15px;
-    background-position: bottom -40px right -270px;
+    background-position: bottom right -290px;
   }
   .hero__title {
     margin-bottom: 15px;
@@ -733,7 +733,7 @@ body.locked {
 @media screen and (max-width: 475px) {
   .hero__body {
     min-height: 350px;
-    padding: 0 10px;
+    padding: 0 15px;
   }
   .hero__subtitle {
     margin-bottom: 30px;
