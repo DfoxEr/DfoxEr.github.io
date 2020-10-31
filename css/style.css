@@ -726,6 +726,7 @@ body.locked {
   }
   .hero__button {
     padding: 15px 25px;
+    font-size: 12px;
   }
 }
 
