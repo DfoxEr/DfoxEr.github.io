@@ -820,6 +820,6 @@ body.locked {
 
 @media screen and (max-width: 576px) {
   .offer__body {
-    padding: 15px;
+    padding: 15px 0;
   }
 }
