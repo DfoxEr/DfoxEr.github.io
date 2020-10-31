@@ -719,7 +719,7 @@ body.locked {
   }
   .hero__title {
     display: inline;
-    background: #fff;
+    background: #f9f9f9;
     font-weight: 500;
   }
   .hero__subtitle {
