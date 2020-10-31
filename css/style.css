@@ -708,7 +708,12 @@ body.locked {
     font-size: 14px;
   }
   .header-nav {
-    padding-left: 10px;
+    padding-left: 0;
+  }
+  .header-menu__link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
