@@ -41,3 +41,18 @@ function windowOnScroll() {
 if (window.innerWidth <= 576) {
     window.removeEventListener("scroll", windowOnScroll);
 }
+
+
+// Клик по кнопке "Записаться на замер"
+const zamerBtn = document.querySelector(".hero__button");
+
+const zamerForm = document.querySelector(".form-main");
+
+zamerBtn.addEventListener("click", onHeroBtnClick);
+
+function onHeroBtnClick() {
+    zamerForm.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}

@@ -131,9 +131,9 @@ body
         display: flex
         flex-direction: column
         flex: 1
-        background: url('/img/form-main-bg.png') no-repeat center right / contain
+        background: url('/img/form-main.png') no-repeat center right -20px / contain
         background-color: #ffffff
-        transform: translateY(-80px)
+        // transform: translateY(-80px)
 
         .form__row
             &_2
@@ -141,9 +141,49 @@ body
 
         &__checkbox
             margin-right: 30px
+            
+        @media screen and ( max-width: 992px )
+            background-image: none
+
+        @media screen and ( max-width: 800px )
+            padding: 50px
+            background-position: center right -300px
+            transform: translateY(0)
+
+            .form__label
+                font-size: 16px
+
+            .form__input, .form-select
+                height: 50px
+
+            .form__row
+                flex-direction: column
+                flex: 1
+                margin-bottom: 0
+
+                .form__group
+                    flex: 1
+                    display: flex
+                    width: 100%
+                    margin-bottom: 20px
+
+                &_2
+                    margin-bottom: 20px
+                    display: flex
+                    flex-direction: row
+
+            .form__subtitle
+                font-size: 18px
 
         @media screen and ( max-width: 576px )
-            transform: translateY(0)
+            padding: 40px 25px 25px 25px
+
+            .form__title
+                font-size: 22px
+
+            .form__subtitle
+                font-size: 16px
+
 
     &__title
         font-size: 25px
@@ -153,7 +193,7 @@ body
         @include bold()
 
     &__subtitle
-        font-size: 21px
+        font-size: 20px
         margin-bottom: 40px
 
     &__row
@@ -172,7 +212,7 @@ body
     &__group
         display: flex
         flex-direction: column
-        width: 33.2%
+        width: 33%
 
     &__input, &-select,
         height: 65px
@@ -202,6 +242,7 @@ body
         appearance: none
         cursor: pointer
         background: url('/img/select-arrow.png') no-repeat center right 20px
+        background-color: #ffffff
 
         &:focus
             outline: none
@@ -217,6 +258,7 @@ body
         justify-content: center
         align-items: center
         height: 100%
+        
 
 // чекбокс
 .checkbox
