@@ -72,9 +72,6 @@ a:visited, a {
 
 body {
   font-family: 'Proxima Nova', sans-serif;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
   overflow-x: hidden;
 }
 
@@ -187,6 +184,7 @@ body.locked {
 
 .button[type="submit"] {
   font-weight: 600;
+  font-family: inherit;
 }
 
 .button {
@@ -663,6 +661,7 @@ body.locked {
 }
 
 .hero {
+  background-color: #fff;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -678,7 +677,7 @@ body.locked {
 }
 
 .hero__title {
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 45px;
   color: #252525;
   font-weight: 600;
@@ -742,7 +741,7 @@ body.locked {
 
 .offer {
   background: #fff;
-  margin-bottom: 60px;
+  padding: 0px 0px 60px 0px;
 }
 
 .offer__body {
@@ -773,6 +772,8 @@ body.locked {
           flex: 1;
   background: url("/img/form-main.png") no-repeat center right -20px/contain;
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.116);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.116);
 }
 
 .form-main .form__row_2 {
@@ -781,8 +782,12 @@ body.locked {
           justify-content: stretch;
 }
 
-.form-main__checkbox {
+.form-main .form__checkbox {
   margin-right: 30px;
+}
+
+.form-main .form__submit {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 992px) {
@@ -850,6 +855,42 @@ body.locked {
   }
   .form-main .form__subtitle {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .form-main .form__title {
+    font-size: 24px;
+  }
+  .form-main .form__subtitle {
+    font-size: 14px;
+  }
+  .form-main .form__label {
+    font-size: 14px;
+  }
+  .form-main .form__input, .form-main .form-select {
+    height: 45px;
+    font-size: 14px;
+  }
+  .form-main .form__checkbox {
+    padding: 5px 0;
+  }
+  .form-main .form__checkbox .checkbox__text {
+    font-size: 14px;
+  }
+  .form-main .form__checkbox .checkbox__text::before {
+    width: 16px;
+    height: 16px;
+  }
+  .form-main .form__checkbox .checkbox__text::after {
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 3px;
+  }
+  .form-main .form__submit {
+    padding: 12px 35px;
+    font-size: 14px;
   }
 }
 

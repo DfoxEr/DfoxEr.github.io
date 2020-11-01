@@ -66,3 +66,8 @@ function onHeroBtnClick() {
         block: 'start'
     });
 }
+
+
+
+// gallery
+$('.gallery').fancybox();
