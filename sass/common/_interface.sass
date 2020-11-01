@@ -7,9 +7,17 @@ body
     font-family: 'Proxima Nova', sans-serif
     // transition: 0.2s
     overflow-x: hidden
+    display: flex
+    min-height: 100vh
+    flex-direction: column
 
     &.locked
         overflow-y: hidden
+
+main
+    display: flex
+    flex-direction: column
+    flex: 1
 
 // Контейнер
 .container
@@ -127,6 +135,15 @@ body
     padding: 70px
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
 
+    // текст ошибки
+    &__error
+        display: inline-block
+        color: red
+        font-size: 14px
+        position: absolute
+        bottom: -3px
+        transform: translateY(100%)
+
 
     &__title
         font-size: 25px
@@ -156,12 +173,16 @@ body
         display: flex
         flex-direction: column
         width: 33%
+        position: relative
 
     &__input, &-select,
         height: 65px
         padding: 0 15px
         font-size: 16px
         font-family: inherit
+
+    &__input::placeholder
+        color: inherit
 
     &__input:focus::-webkit-input-placeholder 
         color: transparent
@@ -243,10 +264,62 @@ body
 
 // Секция
 .section
-
+    padding: 60px 0
     &__title
         text-align: center
         font-size: 30px
         text-transform: uppercase
         
         @include semiBold()
+
+// Затемнение
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: #00000098
+    height: 100%
+    z-index: 99
+    transition: 0.1s
+
+    opacity: 1
+    visibility: visible
+
+    &_hidden
+        opacity: 0
+        visibility: hidden
+
+// модальное окно
+.modal
+    background: #fff
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    z-index: 101
+    max-width: 400px
+    width: 90%
+    transition: 0.2s
+    opacity: 1
+    visibility: visible
+
+    &__wrapper
+        padding: 30px
+
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__close
+        height: 40px
+        width: 50px
+        display: flex
+        background: url('/img/cross.png') no-repeat center / 40px 40px
+        cursor: pointer
+
+    &_hidden
+        transform: translateY(-100%) translateX(-50%)
+        opacity: 0
+        visibility: hidden

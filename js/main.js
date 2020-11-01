@@ -8,6 +8,7 @@ $(".input-phone").mask("+7 (999)-999-99-99");
 const burger = document.querySelector(".burger");
 const headerNav = document.querySelector(".header-nav");
 const header = document.querySelector(".header");
+const overlay = document.querySelector(".overlay");
 
 burger.addEventListener("click", onBurgerClick);
 
@@ -23,14 +24,14 @@ function onBurgerClick(e) {
     if (window.pageYOffset > header.offsetTop && window.pageYOffset < (header.offsetTop+header.clientHeight)) {
         window.scrollTo(0,0);
     }
+
+    overlay.classList.toggle("overlay_hidden");
 }
 
 
 // scroll
 
 const headerBody = document.querySelector(".header__body");
-
-
 const offset = header.offsetTop + header.clientHeight;
 
 window.addEventListener("scroll", onWindowScroll);
@@ -53,21 +54,31 @@ function onWindowScroll(e) {
 }
 
 
-// Клик по кнопке "Записаться на замер"
-const zamerBtn = document.querySelector(".hero__button");
 
-const zamer = document.querySelector(".offer");
+// модальные окна
 
-zamerBtn.addEventListener("click", onHeroBtnClick);
+const modals = document.querySelectorAll(".modal");
 
-function onHeroBtnClick() {
-    zamer.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+
+modals.forEach( (el) => {
+    el.querySelector(".modal__close").addEventListener("click", function(e) {
+        e.preventDefault();
+
+        e.target.closest(".modal").classList.add("modal_hidden");
+        document.querySelector("body").classList.remove("locked");
+
+        overlay.classList.add("overlay_hidden");
     });
-}
+} );
 
-
-
-// gallery
-$('.gallery').fancybox();
+overlay.addEventListener("click", function(e){
+    document.querySelectorAll(".modal").forEach((elem) => {
+        elem.classList.add("modal_hidden");
+    });
+    e.target.classList.add("overlay_hidden");
+    
+    if (burger.classList.contains("burger_active")) {
+        burger.classList.remove("burger_active");
+        headerNav.classList.add("header-nav_hidden");
+    }
+});

@@ -4,7 +4,6 @@
     position: relative
     z-index: 100
     transition: 0.2s
-    min-height: 82px
 
     &__container
         flex: 1
@@ -35,8 +34,6 @@
                     padding: 0 24px
 
             .header-nav
-                transform: translateY(70px)
-
                 &_hidden
                     transform: translateY(0)
         
@@ -61,17 +58,15 @@
 
     &-nav
         position: absolute
-        top: 0
+        bottom: 0
         opacity: 1
         z-index: -1
         display: flex
         left: 0
         width: 100%
         background: #5986e3
-        max-height: 50px
-        align-items: center
         transition: transform 0.2s, opacity 0.15s
-        transform: translateY(82px)
+        transform: translateY(100%)
         z-index: 5
 
         &__wrapper
@@ -102,17 +97,12 @@
 
     @media screen and ( max-width: 992px )
         &-menu
-            padding-left: 0
             padding-right: 0
-
-    @media screen and ( max-width: 850px )
-        &-menu
             flex-direction: column
 
         &-nav
             max-height: 100%
             display: flex
-            padding-left: 104px
             max-height: none
     
     @media screen and ( max-width: 768px )
@@ -129,11 +119,8 @@
             .burger-button
                 padding: 0 20px
 
-        &-nav
-            transform: translateY(70px)
-            padding-left: 94px
-
         &-menu
+            padding-left: 94px
             &__link
                 display: flex
                 flex: 1
@@ -160,7 +147,7 @@
 
         &-menu
 
-
+            padding-left: 0
 
             &__link
                 justify-content: center
@@ -175,3 +162,9 @@
     @media screen and ( max-width: 375px )
         &__logo
             display: none
+
+    @media (orientation: landscape) and ( max-width: 768px )
+        
+        &-nav
+            height: calc(100vh - 70px)
+            overflow: auto
