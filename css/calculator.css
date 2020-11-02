@@ -459,9 +459,9 @@ main {
   background: #00000098;
   height: 100%;
   z-index: 99;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   opacity: 1;
   visibility: visible;
 }
@@ -469,6 +469,10 @@ main {
 .overlay_hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+#overlay-modal {
+  z-index: 100;
 }
 
 .modal {
@@ -503,16 +507,22 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 
 .modal__close {
-  height: 40px;
-  width: 50px;
+  height: 30px;
+  width: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: url("/img/cross.png") no-repeat center/40px 40px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal__close:active {
+  background-color: #eeeeee;
 }
 
 .modal_hidden {
@@ -767,7 +777,7 @@ main {
   }
 }
 
-@media (orientation: landscape) and (max-width: 768px) {
+@media (orientation: landscape) and (max-width: 992px) {
   .header-nav {
     height: calc(100vh - 70px);
     overflow: auto;

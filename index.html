@@ -376,21 +376,23 @@
     </footer>
     <!-- /.footer -->
 
-    <div class="modal modal-success modal_hidden">
+    <div class="modal modal_hidden modal-success">
         <div class="modal__wrapper">
             <div class="modal__header">
-                <h2 class="modal__title">Ваша заявка успешно отправлена!</h2>
+                <h2 class="modal__title">Успешно!</h2>
 
                 <span class="modal__close"></span>
             </div>
 
-            <div class="modal__body"></div>
+            <div class="modal__body">
+                <a class="modal-success__text">Ваша заявка отправлена! Наш менеджер скоро Вам перезвонит</a>
+            </div>
         </div>
     </div>
 
  
-
-    <div class="overlay overlay_hidden"></div>
+    <div class="overlay overlay_hidden" id="overlay-body"></div>
+    <div class="overlay overlay_hidden"  id="overlay-modal"></div>
 
 
     <!-- Подключение jQuery -->

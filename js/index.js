@@ -15,6 +15,11 @@ function onHeroBtnClick() {
 
 
 // Обработка формы на замер
+
+const modalSuccess = document.querySelector(".modal-success");
+
+
+
 $('.form-zamer').on("submit",function(e){
     e.preventDefault();
 
@@ -33,12 +38,8 @@ $('.form-zamer').on("submit",function(e){
     });
 
     if (errors === 0) {
-        const modalSuccess = document.querySelector(".modal-success");
-        const overlay = document.querySelector(".overlay");
-
-        overlay.classList.remove("overlay_hidden");
-        modalSuccess.classList.remove("modal_hidden");
-        document.querySelector("body").classList.add("locked");
+        showModal(modalSuccess);
+        body.classList.add("locked");
 
         e.currentTarget.reset();
     }
