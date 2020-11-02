@@ -89,10 +89,7 @@ main
         font-size: 14px
         color: #6b6b6b
 
-// Кнопка
-.button[type="submit"]
-    font-weight: 600
-    font-family: inherit
+// Кнопки
 .button
     display: flex
     border: none
@@ -198,6 +195,9 @@ main
     &__input:focus:-ms-input-placeholder 
         color: transparent
 
+    &__submit
+        font-family: inherit
+
 
     &-select
         border: 1px solid #dddddd
@@ -222,7 +222,36 @@ main
         justify-content: center
         align-items: center
         height: 100%
-        
+    
+    // Форма обратной связи (в модальном окне)
+    &-callback
+        box-shadow: none
+        padding: 0
+
+        .form__group
+            width: 100%
+
+        .form-select, .form__input
+            height: 50px
+
+        .form__label
+            font-size: 14px
+
+        .form__submit
+            font-size: 14px
+            padding: 14px 30px
+            display: flex
+            align-self: flex-end
+
+        @media screen and ( max-width: 576px )
+            .form__row:last-child
+                flex-direction: column
+
+            .form__checkbox
+                margin-bottom: 15px
+
+            .form__submit
+                width: 100%
 
 // чекбокс
 .checkbox
@@ -231,7 +260,7 @@ main
     &__checkbox
         display: none
 
-        &:checked ~ .checkbox__text::after
+        &:checked ~ .checkbox__text::before
             background: url('/img/checkbox-tick.png') no-repeat center / contain
             // transform: scale(1)
 
@@ -245,8 +274,10 @@ main
     &__text
         display: flex
         align-items: center
+        font-size: 14px  
         &::before
             width: 20px
+            flex: 0 0 20px
             height: 20px
             content: ""
             background: transparent
@@ -254,13 +285,6 @@ main
             display: inline-block
             margin-right: 10px
 
-        &::after
-            position: absolute
-            width: 18px
-            height: 18px
-            content: ""
-            top: 2px
-            left: 2px
 
 // Секция
 .section
@@ -304,7 +328,7 @@ main
     top: 50%
     transform: translate(-50%,-50%)
     z-index: 101
-    max-width: 400px
+    max-width: 600px
     width: 90%
     transition: 0.2s
     opacity: 1
@@ -312,6 +336,10 @@ main
 
     &__wrapper
         padding: 30px
+
+    &__title
+        font-size: 26px
+
 
     &__header
         display: flex
@@ -334,3 +362,7 @@ main
         transform: translateY(-100%) translateX(-50%)
         opacity: 0
         visibility: hidden
+
+#modal-callback
+    .modal__body
+        padding-top: 15px

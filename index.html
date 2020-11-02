@@ -34,7 +34,7 @@
                         <a class="header-contacts__email" href="/">dfox.cup@yandex.ru</a>
                     </div>
     
-                    <button class="button button-o header__button">
+                    <button class="button button-o header__button button-callback">
                         заказать звонок
                     </button>
     
@@ -376,7 +376,7 @@
     </footer>
     <!-- /.footer -->
 
-    <div class="modal modal_hidden modal-success">
+    <div class="modal modal_hidden" id="modal-success">
         <div class="modal__wrapper">
             <div class="modal__header">
                 <h2 class="modal__title">Успешно!</h2>
@@ -386,6 +386,51 @@
 
             <div class="modal__body">
                 <a class="modal-success__text">Ваша заявка отправлена! Наш менеджер скоро Вам перезвонит</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal_hidden" id="modal-callback">
+        <div class="modal__wrapper">
+            <div class="modal__header">
+                <h2 class="modal__title">Обратный звонок</h2>
+
+                <span class="modal__close"></span>
+            </div>
+
+            <div class="modal__body">
+                <form action="#" method="POST" class="form form-callback">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="" class="form__label">Ваше имя</label>
+                            <input type="text" class="form__input" name="name">
+                            <span class="form__error"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="" class="form__label">Ваш телефон</label>
+                            <input type="text" class="form__input input-phone" name="name">
+                            <span class="form__error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="checkbox form__checkbox">  
+                            <label for="dataConfirm" class="checkbox__label">
+                                <input type="checkbox" id="dataConfirm" name="dataConfirm" class="checkbox__checkbox">
+                                <span class="checkbox__text">Согласен на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="form__group">
+                            <input type="submit" value="Отправить" class="button button-primary form__submit">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

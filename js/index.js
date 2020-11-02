@@ -16,7 +16,7 @@ function onHeroBtnClick() {
 
 // Обработка формы на замер
 
-const modalSuccess = document.querySelector(".modal-success");
+const modalSuccess = document.getElementById("modal-success");
 
 
 

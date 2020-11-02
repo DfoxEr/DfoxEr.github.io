@@ -104,3 +104,18 @@ function hideModal(modal) {
     modalOverlay.classList.add("overlay_hidden");
     body.classList.remove("locked");
 }
+
+
+
+// обратный звонок
+
+const modalCallback = document.getElementById("modal-callback");
+const callbackBtn = document.querySelector(".button-callback");
+
+
+
+callbackBtn.addEventListener("click", function(e){
+    e.preventDefault();
+
+    showModal(modalCallback);
+});
