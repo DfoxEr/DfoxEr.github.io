@@ -1,8 +1,150 @@
 .section
 
-    &-calculator
-
+    &-constructor
+        padding: 60px 0px 120px 0px
         .section__title
             text-align: left
-            text-transform: capitalize
+            text-transform: inherit
+            margin-bottom: 30px
             @include bold()
+
+
+// конструктор окон
+.constructor
+    display: flex
+    &__window
+        display: flex
+        background: #f3f3f3
+        border-radius: 5px
+        overflow: hidden
+        margin-right: 60px
+        flex: 0 0 420px
+        max-height: 420px
+    
+    &__display
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 50px
+        min-width: 300px
+        height: 420px
+
+    &__bigImg
+        display: inline-block
+        max-width: 200px
+        width: 95%
+        object-fit: cover
+
+    &-windows
+        display: flex
+        flex-direction: column
+        flex: 1
+        height: 100%
+        min-width: 89px
+        background: #eeeeee
+        &__window
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 10px 20px
+            cursor: pointer
+            border-radius: 5px
+            transition: 0.15s
+            min-height: 80px
+
+            &_selected
+                background: #507fe1
+
+
+.form
+
+    &-constructor
+        box-shadow: none
+        padding: 0
+        flex: 1
+
+        .form__title
+            margin-bottom: 20px
+            font-size: 22px
+            @include semiBold()
+            text-transform: inherit
+
+        .form__input, .form-select
+            height: 30px
+            font-size: 14px
+            padding: 0 8px
+            border-radius: 5px
+
+        .form__checkbox
+            
+            .checkbox__text
+                &::before
+                    transition: 0.15s
+
+        .form-select
+            background-size: 15px
+            background-position: center right 10px
+
+        .form__label
+            font-size: 15px
+
+        .form__row
+
+            &_1
+                justify-content: stretch
+
+
+            &_2
+                flex-direction: column
+                padding-top: 20px
+                border-top: 2px dotted #d4d4d4
+                margin-bottom: 30px
+
+        .form__column
+            margin-right: 40px
+
+            &_2
+                width: 50%
+
+                .form__group
+                    margin-bottom: 20px
+
+        .form__group
+            width: auto
+
+        &__radio
+            .radio__text
+                color: #979797
+
+            .radio__label
+                padding: 10px 0
+
+        .form__optional
+            display: flex
+
+            .form__checkbox
+                .checkbox__label
+                    padding: 10px 0
+
+                .checkbox__text
+                    font-size: 14px
+                    color: #727272
+
+                    &::before
+                        height: 9px 
+                        flex: 0 0 9px
+                        border-radius: 50%
+                        border: none
+                        box-shadow: 0 0 0 1px #a6a6a6
+                        border: 3px solid #ffffff
+                
+                .checkbox__checkbox
+                    &:checked ~ .checkbox__text::before
+                        
+                        background: #507fe1
+
+        .form__submit
+            padding: 10px 25px
+            border-radius: 40px
+            text-transform: inherit
+            font-size: 16px
