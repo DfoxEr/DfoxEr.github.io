@@ -25,7 +25,8 @@
 
         .form__row
             &_2
-                justify-content: stretch
+                justify-content: flex-end
+                margin-bottom: 0
 
         .form__checkbox
             margin-right: 30px
@@ -45,26 +46,39 @@
                 height: 50px
 
             .form__row
-                flex-direction: column
-                flex: 1
-                margin-bottom: 0
-
                 .form__group
-                    flex: 1
-                    display: flex
                     width: 100%
+                    flex: 1
+                &_1
+                    flex-direction: column
+                    flex: 1
+                    margin-bottom: 0
+
+                    .form__group
+                        margin-bottom: 30px
+
+                        &:last-child
+                            margin-bottom: 0
+                    
                     margin-bottom: 30px
 
                 &_2
-                    margin-bottom: 20px
                     display: flex
                     flex-direction: row
 
             .form__subtitle
                 font-size: 18px
+        @media screen and ( max-width: 768px )
+            padding: 35px
 
         @media screen and ( max-width: 576px )
             padding: 35px 26px
+
+            .form__row
+                &_2
+                    margin-bottom: 0
+                    .form__group
+                        margin-bottom: 0
 
             .form__title
                 margin-bottom: 10px

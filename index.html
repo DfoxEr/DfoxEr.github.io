@@ -158,30 +158,38 @@
                         <h2 class="form__title">оставьте заявку на замер</h2>
                         <span class="form__subtitle">И получите скидку <strong>15%</strong> на монтаж оконного профиля</span>
 
-                        <div class="form__row">
-                            <div class="form__group">
+                        <div class="form__row form__row_1">
+                            <!-- <div class="form__group">
                                 <label for="" class="form__label">Вид стекла</label>
                                 <select name="windowType" id="windowType" class="form-select">
                                     <option value="hard" class="form-select__option">Тяжелое</option>
                                     <option value="soft" class="form-select__option">Легкое</option>
                                     <option value="Для тебя" class="form-select__option">Блять</option>
                                 </select>
-                            </div>
+                            </div> -->
 
                             <div class="form__group">
-                                <label for="" class="form__label">Ширина, см</label>
-                                <input type="text" class="form__input req" name="width">
+                                <label for="" class="form__label">Ваше имя</label>
+                                <input type="text" class="form__input req" name="name">
                                 <span class="form__error"></span>
                             </div>
 
                             <div class="form__group">
-                                <label for="" class="form__label">Высота, см</label>
-                                <input type="text" class="form__input req" name="height">
+                                <label for="" class="form__label">Номер телефона</label>
+                                <input type="text" class="form__input input-phone req" name="phone">
                                 <span class="form__error"></span>
                             </div>
+
+                            <div class="form__group">
+                                <label for="" class="form__label">Адрес</label>
+                                <input type="text" class="form__input req" name="address">
+                                <span class="form__error"></span>
+                            </div>
+
+                            
                         </div>
 
-                        <div class="form__row form__row_2">
+                        <!-- <div class="form__row form__row_2">
                             <div class="checkbox form__checkbox">  
                                 <label for="installation" class="checkbox__label">
                                     <input type="checkbox" id="installation" name="installation" class="checkbox__checkbox" checked>
@@ -195,21 +203,11 @@
                                     <span class="checkbox__text">Доставка</span>
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form__row">
+                        <div class="form__row form__row_2">
                             <div class="form__group">
-                                <input type="text" placeholder="Ваше имя" class="form__input req" name="name">
-                                <span class="form__error"></span>
-                            </div>
-
-                            <div class="form__group">
-                                <input type="text" placeholder="Ваш телефон" class="form__input input-phone req" name="phone">
-                                <span class="form__error"></span>
-                            </div>
-
-                            <div class="form__group">
-                                <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="button button-primary form__submit">
+                                <input type="submit" value="оформить заявку" class="button button-primary form__submit">
                             </div>
                         </div>
                     </form>
@@ -383,6 +381,7 @@
 
             <div class="modal__body">
                 <a class="modal-success__text">Ваша заявка отправлена! Наш менеджер скоро Вам перезвонит</a>
+
             </div>
         </div>
     </div>

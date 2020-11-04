@@ -57,3 +57,43 @@ radioWindows.forEach((elem, index) => {
         }
     });
 });
+
+
+
+
+
+// обработка формы
+const modalSuccess = document.getElementById("modal-success")
+
+$(".form-constructor").on("submit", function(e) {
+    e.preventDefault();
+
+
+    const required = e.target.querySelectorAll(".req");
+    let errors = 0;
+
+    required.forEach((elem, index) => {
+        if (!elem.value.trim()) {
+            errors++;
+            elem.style.border = "1px solid red";
+        }
+        else {
+            elem.style.border = "";
+        }
+    });
+
+    if (errors === 0)
+    {
+        showModal(modalSuccess);
+        e.target.reset();
+
+        windows.forEach((elem,index)=>{
+            if (index === 0) {
+                elem.classList.add("constructor-windows__window_selected");
+            }
+            else {
+                elem.classList.remove("constructor-windows__window_selected");
+            }
+        });
+    }
+ });

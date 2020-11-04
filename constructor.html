@@ -110,34 +110,36 @@
                         <form action="#" method="POST" class="form form-constructor">
                             <input type="hidden" name="window-selected" id="window-selected" value="okno1_1stv">
                             <div class="form__row form__row_1">
-                                <div class="form__column">
+                                <div class="form__column form__column_1">
                                     <h2 class="form__title">Конструкция</h2>
-                                    <div class="radio form-constructor__radio">
-                                        <label for="1stv" class="radio__label">
-                                            <input type="radio" name="window-type" value="1stv" id="1stv" class="radio__button" checked>
-                                            <span class="radio__text">1 створчатые</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="radio form-constructor__radio">
-                                        <label for="2stv" class="radio__label">
-                                            <input type="radio" name="window-type" value="2stv" id="2stv" class="radio__button">
-                                            <span class="radio__text">2х створчатые</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="radio form-constructor__radio">
-                                        <label for="3stv" class="radio__label">
-                                            <input type="radio" name="window-type" value="3stv" id="3stv" class="radio__button">
-                                            <span class="radio__text">3х створчатые</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="radio form-constructor__radio">
-                                        <label for="dver" class="radio__label">
-                                            <input type="radio" name="window-type" value="dver" id="dver" class="radio__button">
-                                            <span class="radio__text">Двери и балконные блоки</span>
-                                        </label>
+                                    <div class="form__group">
+                                        <div class="radio form-constructor__radio">
+                                            <label for="1stv" class="radio__label">
+                                                <input type="radio" name="window-type" value="1stv" id="1stv" class="radio__button" checked>
+                                                <span class="radio__text">1 створчатые</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="radio form-constructor__radio">
+                                            <label for="2stv" class="radio__label">
+                                                <input type="radio" name="window-type" value="2stv" id="2stv" class="radio__button">
+                                                <span class="radio__text">2х створчатые</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="radio form-constructor__radio">
+                                            <label for="3stv" class="radio__label">
+                                                <input type="radio" name="window-type" value="3stv" id="3stv" class="radio__button">
+                                                <span class="radio__text">3х створчатые</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="radio form-constructor__radio">
+                                            <label for="dver" class="radio__label">
+                                                <input type="radio" name="window-type" value="dver" id="dver" class="radio__button">
+                                                <span class="radio__text">Двери и балконные блоки</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -145,29 +147,24 @@
                                     <h2 class="form__title">Параметры</h2>
                                     
                                     <div class="form__group">
-                                        <label for="" class="form__label">Ширина, мм</label>
+                                        <label for="" class="form__label">Ширина, м</label>
                                         <input type="text" name="windowWidth" id="windowWidth" class="form__input">
                                     </div>
 
                                     <div class="form__group">
-                                        <label for="" class="form__label">Высота, мм</label>
+                                        <label for="" class="form__label">Высота, м</label>
                                         <input type="text" name="windowHeight" id="windowHeight" class="form__input">
-                                    </div>
-
-                                    <div class="form__group">
-                                        <label for="" class="form__label">Ширина, мм</label>
-                                        <input type="text" name="windowWidth" id="windowWidth" class="form__input">
                                     </div>
 
                                     <div class="form__group">
                                         <label for="" class="form__label">Профиль</label>
                                         <select name="windowProfile" id="windowProfile" class="form-select">
-                                            <optgroup label="Rehau">
-                                                <option value="Rehau Grazio" class="form-select__option">Grazio</option>
-                                                <option value="Rehau BLITZ NEW" class="form-select__option">Blitz New</option>
+                                            <optgroup label="Exprof">
+                                                <option value="Exprof Prowin 3-х камерный" class="form-select__option">Prowin 3-х камерный</option>
+                                                <option value="Exprof Profecta Plus 5-ти камерный" class="form-select__option">Profecta Plus 5-ти камерный</option>
                                             </optgroup>
 
-                                            <optgroup label="Exprof">
+                                            <optgroup label="TecoLine">
                                                 <option value="Exprof Prowin 3-х камерный" class="form-select__option">Prowin 3-х камерный</option>
                                                 <option value="Exprof Profecta Plus 5-ти камерный" class="form-select__option">Profecta Plus 5-ти камерный</option>
                                             </optgroup>
@@ -230,10 +227,32 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <div class="form__row form__row_3">
-                                <input type="submit" class="button button-primary form__submit" value="Рассчитать">
+                                <h3 class="form__title">Контактная информация</h3>
+
+                                <div class="form__block">
+                                    <div class="form__group">
+                                        <div class="form__group">
+                                            <label for="" class="form__label">Ваше имя <span class="form__required">*</span></label>
+                                            <input type="text" class="form__input req" name="name">
+                                            <span class="form__error"></span>
+                                        </div>
+
+                                        <div class="form__group">
+                                            <label for="" class="form__label">Ваш телефон <span class="form__required">*</span></label>
+                                            <input type="text" class="form__input input-phone req" name="phone">
+                                            <span class="form__error"></span>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <input type="submit" class="button button-primary form__submit" value="Рассчитать">
+                                </div>
                             </div>
+
+                           
                         </form>
                     </div>
 
@@ -332,6 +351,21 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal_hidden" id="modal-success">
+        <div class="modal__wrapper">
+            <div class="modal__header">
+                <h2 class="modal__title">Успешно!</h2>
+
+                <span class="modal__close"></span>
+            </div>
+
+            <div class="modal__body">
+                <a class="modal-success__text">Ваша заявка отправлена! Наш менеджер скоро Вам перезвонит</a>
             </div>
         </div>
     </div>

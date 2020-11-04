@@ -26,7 +26,7 @@ main
     padding: 0 15px
 
     @media screen and ( max-width: 1200px )
-        max-width: 960px
+        max-width: 1100px
 
     @media screen and ( max-width: 992px )
         max-width: 860px
@@ -164,7 +164,7 @@ main
 
     &__label
         font-size: 17px
-        margin-bottom: 10px
+        margin-bottom: 6px
 
     &__group
         display: flex
@@ -173,7 +173,7 @@ main
         position: relative
 
     &__input, &-select,
-        height: 65px
+        height: 50px
         padding: 0 15px
         font-size: 16px
         font-family: inherit
@@ -249,7 +249,7 @@ main
 
         .form__submit
             font-size: 14px
-            padding: 14px 30px
+            padding: 10px 25px
             display: flex
             align-self: flex-end
 
@@ -262,6 +262,10 @@ main
 
             .form__submit
                 width: 100%
+
+    &__required
+        color: red
+        @include bold()
 
 // радиокнопка
 .radio
@@ -404,6 +408,12 @@ main
         transform: translateY(-100%) translateX(-50%)
         opacity: 0
         visibility: hidden
+
+    // ссылка "на главную"
+    &__link
+        display: inline-block
+        color: #507fe1
+        text-decoration: underline
 
 #modal-callback
     max-width: 500px

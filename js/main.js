@@ -33,27 +33,27 @@ function onBurgerClick(e) {
 
 // scroll
 
-const headerBody = document.querySelector(".header__body");
-const offset = header.offsetTop + header.clientHeight;
+// const headerBody = document.querySelector(".header__body");
+// const offset = header.offsetTop + header.clientHeight;
 
-window.addEventListener("scroll", onWindowScroll);
+// window.addEventListener("scroll", onWindowScroll);
 
-function onWindowScroll(e) {
-    if (window.pageYOffset > offset) {
-        if (!headerBody.classList.contains("header__body_fixed")) {
-            headerBody.style.transform = 'translateY(-100%)';
-            setTimeout(
-                function() {
-                    headerBody.style.transform = 'translateY(0)';
-                    headerBody.classList.add("header__body_fixed");
-                }
-            ,100);
-        }
-    }
-    else {
-        headerBody.classList.remove("header__body_fixed");
-    }
-}
+// function onWindowScroll(e) {
+//     if (window.pageYOffset > offset) {
+//         if (!headerBody.classList.contains("header__body_fixed")) {
+//             headerBody.style.transform = 'translateY(-100%)';
+//             setTimeout(
+//                 function() {
+//                     headerBody.style.transform = 'translateY(0)';
+//                     headerBody.classList.add("header__body_fixed");
+//                 }
+//             ,100);
+//         }
+//     }
+//     else {
+//         headerBody.classList.remove("header__body_fixed");
+//     }
+// }
 
 
 // overlay
