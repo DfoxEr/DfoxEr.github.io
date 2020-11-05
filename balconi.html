@@ -113,16 +113,21 @@
                         <div class="article-imgblock article-imgblock_2">
                             <div class="article-img">
                                 <img src="/img/balconi/razdvizhn.jpg" alt="Остекление балконов в Омске с выносом" class="article-img__img">
-                                <span class="article-img__title">
-                                    Раздвижные окна
-                                </span>
-
-                                <p class="article-img__subtitle">Такой вариант удобный, практичный, замок конструкции очень простой, а главное, понятный.</p>
+                                <div class="article-img__block">
+                                    <span class="article-img__title">
+                                        Раздвижные окна
+                                    </span>
+    
+                                    <p class="article-img__subtitle">Такой вариант удобный, практичный, замок конструкции очень простой, а главное, понятный.</p>
+                                </div>
                             </div>
                             <div class="article-img">
                                 <img src="/img/balconi/balkon-vinos.jpg" alt="Остекление балконов в Омске с выносом" class="article-img__img">
-                                <span class="article-img__title">Остекление балконов в Омске с выносом</span>
-                                <p class="article-img__subtitle">Остекление балконов в Омске с выносом выбирают чаще всего. Эта конструкция является безопасной, работы проводятся за пределами старого балкона, и она закреплена металлическими швеллерами.</p>
+                                
+                                <div class="article-img__block">
+                                    <span class="article-img__title">Остекление балконов в Омске с выносом</span>
+                                    <p class="article-img__subtitle">Остекление балконов в Омске с выносом выбирают чаще всего. Эта конструкция является безопасной, работы проводятся за пределами старого балкона, и она закреплена металлическими швеллерами.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,21 +190,6 @@
     </footer>
     <!-- /.footer -->
 
-    <div class="modal modal_hidden" id="modal-success">
-        <div class="modal__wrapper">
-            <div class="modal__header">
-                <h2 class="modal__title">Успешно!</h2>
-
-                <span class="modal__close"></span>
-            </div>
-
-            <div class="modal__body">
-                <a class="modal-success__text">Ваша заявка отправлена! Наш менеджер скоро Вам перезвонит</a>
-
-            </div>
-        </div>
-    </div>
-
 
     <div class="modal modal_hidden" id="modal-callback">
         <div class="modal__wrapper">
@@ -214,7 +204,7 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Ваше имя</label>
-                            <input type="text" class="form__input" name="name">
+                            <input type="text" class="form__input req" name="name">
                             <span class="form__error"></span>
                         </div>
                     </div>
@@ -223,7 +213,7 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Ваш телефон</label>
-                            <input type="text" class="form__input input-phone" name="name">
+                            <input type="text" class="form__input input-phone req" name="name">
                             <span class="form__error"></span>
                         </div>
                     </div>
@@ -231,7 +221,7 @@
                     <div class="form__row">
                         <div class="checkbox form__checkbox">  
                             <label for="dataConfirm" class="checkbox__label">
-                                <input type="checkbox" id="dataConfirm" name="dataConfirm" class="checkbox__checkbox">
+                                <input type="checkbox" id="dataConfirm" name="dataConfirm" class="checkbox__checkbox req">
                                 <span class="checkbox__text">Согласен на обработку персональных данных</span>
                             </label>
                         </div>
@@ -244,6 +234,8 @@
             </div>
         </div>
     </div>
+
+
 
  
     <div class="overlay overlay_hidden" id="overlay-body"></div>
@@ -258,6 +250,9 @@
 
     <!-- Подключение основного скрипта -->
     <script src="/js/main.js"></script>
+
+    <!-- Подключение скрипта для страницы балконов -->
+    <script src="/js/balconi.js"></script>
 
 
 </body>

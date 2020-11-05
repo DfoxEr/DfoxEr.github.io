@@ -107,15 +107,66 @@ function hideModal(modal) {
 
 
 
+// проверка заполненности полей
+function checkRequired (form) {
+    const req = form.querySelectorAll(".req");
+
+    let success = false;
+
+    req.forEach((elem,index) => {
+        if(elem.type === "checkbox")
+        {
+            if (!elem.checked) {
+                elem.parentNode.querySelector(".checkbox__text").style.borderBottom = '1px solid red';
+                success = false;
+            }
+            else {
+                elem.parentNode.querySelector(".checkbox__text").style.borderBottom = '';
+                success = true;
+            }
+        }
+        else {
+            if (!elem.value.trim())
+            {
+                success = false;
+                elem.style.borderBottom = '1px solid red';
+            }
+            else {
+                success = true;
+                elem.style.borderBottom = '';
+            }
+        }
+    });
+
+    return success;
+}
+
+
+
+
 // обратный звонок
 
 const modalCallback = document.getElementById("modal-callback");
 const callbackBtn = document.querySelector(".button-callback");
+const callbackForm = modalCallback.querySelector(".form-callback");
 
 
-
+// кнопка обратного звонка (в header)
 callbackBtn.addEventListener("click", function(e){
     e.preventDefault();
 
     showModal(modalCallback);
 });
+
+
+// обработчик формы обратного звонка
+callbackForm.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if (checkRequired(e.target) === true) {
+        alert("ok");
+        e.target.reset();
+    }
+});
+
+

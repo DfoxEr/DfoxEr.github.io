@@ -68,21 +68,7 @@ const modalSuccess = document.getElementById("modal-success")
 $(".form-constructor").on("submit", function(e) {
     e.preventDefault();
 
-
-    const required = e.target.querySelectorAll(".req");
-    let errors = 0;
-
-    required.forEach((elem, index) => {
-        if (!elem.value.trim()) {
-            errors++;
-            elem.style.borderBottom = "1px solid red";
-        }
-        else {
-            elem.style.borderBottom = "";
-        }
-    });
-
-    if (errors === 0)
+    if (checkRequired(e.target) === true)
     {
         showModal(modalSuccess);
         e.target.reset();

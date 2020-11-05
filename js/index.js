@@ -23,22 +23,7 @@ const modalSuccess = document.getElementById("modal-success");
 $('.form-zamer').on("submit",function(e){
     e.preventDefault();
 
-    const required = e.target.querySelectorAll('.req');
-
-    let errors = 0;
-
-    required.forEach(function(item,index){
-        if(!item.value.trim()) {
-            errors++;
-            item.style.borderBottom = "1px solid red";
-        }
-        else {
-            item.style.borderBottom = "";
-            
-        }
-    });
-
-    if (errors === 0) {
+    if (checkRequired(e.target) === true) {
         showModal(modalSuccess);
         body.classList.add("locked");
 
