@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 body {
   padding: 0;
   margin: 0;
@@ -124,12 +125,6 @@ main {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .container {
-    padding: 0;
-  }
-}
-
 .burger {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,7 +229,7 @@ main {
 }
 
 .button-primary {
-  padding: 20px 35px;
+  padding: 15px 28px;
   background: #507fe1;
   color: #ffffff;
   text-transform: uppercase;
@@ -789,16 +784,17 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 104px;
+  padding-left: 106px;
   padding-right: 15px;
 }
 
 .header-menu__link {
   display: inline-block;
   padding: 18px 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #ffffff;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 992px) {
@@ -850,8 +846,8 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-  .header__body {
-    padding-right: 10px;
+  .header__container {
+    padding-left: 0;
   }
   .header__burger {
     margin-right: 15px;
@@ -1243,21 +1239,6 @@ main {
   .stage:last-child {
     margin-bottom: 0;
   }
-}
-
-.section-raschet .section__title {
-  margin-bottom: 30px;
-}
-
-.form-raschet {
-  padding: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.form-raschet .form__subtitle {
-  margin-bottom: 20px;
-  display: inline-block;
 }
 
 .footer {

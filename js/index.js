@@ -30,10 +30,11 @@ $('.form-zamer').on("submit",function(e){
     required.forEach(function(item,index){
         if(!item.value.trim()) {
             errors++;
-            item.closest(".form__group").querySelector(".form__error").innerHTML = "* заполните поле";
+            item.style.borderBottom = "1px solid red";
         }
         else {
-            item.closest(".form__group").querySelector(".form__error").innerHTML = "";
+            item.style.borderBottom = "";
+            
         }
     });
 

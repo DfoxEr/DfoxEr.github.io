@@ -81,7 +81,7 @@
         display: flex
         flex: 1
         justify-content: space-between
-        padding-left: 104px
+        padding-left: 106px
         padding-right: 15px
 
         &__item
@@ -90,10 +90,11 @@
         &__link
             display: inline-block
             padding: 18px 0
-            text-transform: capitalize
+            text-transform: uppercase
             color: #ffffff
+            font-size: 14px
 
-            @include light()
+            @include regular()
 
     @media screen and ( max-width: 992px )
         &-menu
@@ -126,8 +127,8 @@
                 flex: 1
 
     @media screen and ( max-width: 576px )
-        &__body
-            padding-right: 10px
+        &__container
+            padding-left: 0
 
         &__burger
             margin-right: 15px

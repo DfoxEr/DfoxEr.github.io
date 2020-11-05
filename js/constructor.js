@@ -75,10 +75,10 @@ $(".form-constructor").on("submit", function(e) {
     required.forEach((elem, index) => {
         if (!elem.value.trim()) {
             errors++;
-            elem.style.border = "1px solid red";
+            elem.style.borderBottom = "1px solid red";
         }
         else {
-            elem.style.border = "";
+            elem.style.borderBottom = "";
         }
     });
 
