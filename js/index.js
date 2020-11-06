@@ -1,33 +1,34 @@
 // Клик по кнопке "Записаться на замер"
-const zamerBtn = document.querySelector(".hero__button");
 
-const zamer = document.querySelector(".offer");
+$(".hero__button").click(function(){
+    let offset = $(".offer").offset().top;
 
-zamerBtn.addEventListener("click", onHeroBtnClick);
-
-function onHeroBtnClick() {
-    zamer.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-}
+    $('html, body').animate({scrollTop: offset}, 1000);
+});
 
 
 
 // Обработка формы на замер
 
-const modalSuccess = document.getElementById("modal-success");
-
-
-
 $('.form-zamer').on("submit",function(e){
     e.preventDefault();
 
-    if (checkRequired(e.target) === true) {
-        showModal(modalSuccess);
-        body.classList.add("locked");
+    if (getEmpty(e.target) === 0) {
+        showModal($("#modal-success"));
+        
+        $('body').addClass("locked");
 
-        e.currentTarget.reset();
+        $.ajax({
+            url: '/php/zamerHandler.php',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(data) {
+                console.dir(data);
+            }
+        });
+
+        $(this).trigger("reset");
     }
 
 });

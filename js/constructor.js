@@ -1,59 +1,49 @@
 // Весь конструктор
-const constructor = document.querySelector(".constructor");
-const windows = constructor.querySelectorAll(".constructor-windows__window");
-const bigImg = document.getElementById("constructor__bigImg");
-const radioWindows = constructor.querySelectorAll("input[name='window-type']");
-const windowSelected = document.getElementById("window-selected");
-const dver = document.getElementById("dver");
 
-windows.forEach((win) => {
-    win.addEventListener("click", onWindowClick);
+
+$(".constructor-windows__window").click(function(){
+
+    $("#dver").removeAttr("disabled");
+    
+    $(".constructor-windows__window").each(function(){
+        $(this).removeClass("constructor-windows__window_selected");
+    });
+    
+    $(this).addClass("constructor-windows__window_selected");
+    
+    let windowType = $(".constructor").find("input[name='window-type']:checked").val();
+
+    let imgSrc = "/img/constructor/okno"+($(this).index()+1)+"/"+windowType+".jpg";
+    
+    $("#window-selected").val(imgSrc);
+
+    $("#constructor__bigImg").attr("src", imgSrc);
+
+
+    if (($(this).index()+1) === 4) {
+        $("#dver").attr("disabled", "disabled");
+    }
 });
 
-function onWindowClick(e) {
-    dver.removeAttribute("disabled");
-    windows.forEach((win) => {
-        win.classList.remove("constructor-windows__window_selected");
-    });
-
-    e.target.classList.add("constructor-windows__window_selected");
-    
-    const winsArray = Array.prototype.slice.call(windows);
-    
-
-    let windowType = constructor.querySelector("input[name='window-type']:checked").value;
-
-    bigImg.setAttribute("src","/img/constructor/okno"+(winsArray.indexOf(e.target)+1)+"/"+windowType+".jpg");
-
-    windowSelected.value = "okno"+(winsArray.indexOf(e.target)+1)+"_"+windowType;
-
-    // блокировка последнего радиобокса
-    if ((winsArray.indexOf(e.target)+1) === 4) {
-
-        dver.setAttribute("disabled", "disabled");
-    }
-}
 
 
-radioWindows.forEach((elem, index) => {
-    elem.addEventListener("change", function(e){
 
-        const winsArray = Array.prototype.slice.call(windows);
+$(".constructor").find("input[name='window-type']").each(function(index){
+    $(this).on("change", function(){
+        let windowIndex = $(".constructor-windows__window_selected").index();
+        
+        let imgSrc = "/img/constructor/okno"+(windowIndex+1)+"/"+$(this).val()+".jpg";
 
-        let windowIndex = winsArray.indexOf(constructor.querySelector(".constructor-windows").querySelector(".constructor-windows__window_selected"));
+        $("#window-selected").val(imgSrc);
 
-        let imgSrc = "/img/constructor/okno"+(windowIndex+1)+"/"+e.target.value+".jpg";
+        $("#constructor__bigImg").attr("src", imgSrc);
 
-        bigImg.setAttribute("src", imgSrc);
-        windowSelected.value = "okno"+(windowIndex+1)+"_"+e.target.value;
 
-        // блокировка последнего окна
         if ((index+1) == 4) {
-            windows[3].style.display = 'none';
+            $(".constructor-windows__window").eq(3).css("display", "none");
         }
         else {
-            windows[3].style.display = 'flex';
-
+            $(".constructor-windows__window").eq(3).css("display", "flex");
         }
     });
 });
@@ -63,22 +53,32 @@ radioWindows.forEach((elem, index) => {
 
 
 // обработка формы
-const modalSuccess = document.getElementById("modal-success")
 
 $(".form-constructor").on("submit", function(e) {
     e.preventDefault();
 
-    if (checkRequired(e.target) === true)
+    if (getEmpty(e.target) === 0)
     {
-        showModal(modalSuccess);
+        showModal($("#modal-success"));
+
+        $.ajax({
+            url: '/php/constructorHandler.php',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'html',
+            success: function(data) {
+                console.dir(data);
+            }
+        });
+
         e.target.reset();
 
-        windows.forEach((elem,index)=>{
+        $(".constructor-windows__window").each(function(index){
             if (index === 0) {
-                elem.classList.add("constructor-windows__window_selected");
+                $(this).addClass("constructor-windows__window_selected");
             }
             else {
-                elem.classList.remove("constructor-windows__window_selected");
+                $(this).removeClass("constructor-windows__window_selected");
             }
         });
     }

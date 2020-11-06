@@ -5,30 +5,20 @@ $(".input-phone").mask("+7 (999)-999-99-99");
 
 // ----
 
-const burger = document.querySelector(".burger");
-const headerNav = document.querySelector(".header-nav");
-const header = document.querySelector(".header");
-const overlayBody = document.getElementById("overlay-body");
+$('.burger').click(function(){
+    $(this).toggleClass("burger_active");
 
-const body = document.querySelector("body");
+    $(".header-nav").toggleClass("header-nav_hidden");
 
-burger.addEventListener("click", onBurgerClick);
+    $('body').toggleClass("locked");
 
-function onBurgerClick(e) {
-    const targ = e.target;
+    $('#overlay-body').toggleClass("overlay_hidden");
 
-    targ.closest(".burger").classList.toggle("burger_active");
-
-    headerNav.classList.toggle("header-nav_hidden");
-
-    body.classList.toggle("locked");
-
-    if (window.pageYOffset > header.offsetTop && window.pageYOffset < (header.offsetTop+header.clientHeight)) {
-        window.scrollTo(0,0);
+    if (window.pageYOffset > $(".header").offset().top && window.pageYOffset < ($(".header").offset().top+$(".header").height()))
+    {
+        $('html, body').scrollTop(0);
     }
-
-    overlayBody.classList.toggle("overlay_hidden");
-}
+});
 
 
 // scroll
@@ -58,12 +48,12 @@ function onBurgerClick(e) {
 
 // overlay
 
-overlayBody.addEventListener("click", function(e){
-    if (burger.classList.contains("burger_active")) {
-        burger.classList.remove("burger_active");
-        headerNav.classList.add("header-nav_hidden");
-        body.classList.remove("locked");
-        overlayBody.classList.add("overlay_hidden");
+$("#overlay-body").click(function(){
+    if ($(".burger").hasClass("burger_active")) {
+        $(".burger").removeClass("burger_active");
+        $(".header-nav").addClass("header-nav_hidden");
+        $('body').removeClass("locked");
+        $(this).addClass("overlay_hidden");
     }
 });
 
@@ -71,74 +61,71 @@ overlayBody.addEventListener("click", function(e){
 
 // модальные окна
 
-const modals = document.querySelectorAll(".modal");
-const modalOverlay = document.getElementById("overlay-modal");
-
-modalOverlay.addEventListener("click", function(e) {
-    modals.forEach((mod) => {
-        if (!mod.classList.contains("modal__hidden"))
-            mod.classList.add("modal_hidden");
+$("#overlay-modal").click(function(){
+    $(".modal").each(function(){
+        $(this).addClass("modal_hidden");
     });
 
-    modalOverlay.classList.add("overlay_hidden");
-    body.classList.remove("locked");
+    $(this).addClass("overlay_hidden");
+    $('body').removeClass("locked");
 });
 
-modals.forEach((modal) => {
-    modal.querySelector(".modal__close").addEventListener("click", function(e){
-        modal.classList.add("modal_hidden");
+$(".modal").each(function(){
+    let modal = $(this);
 
-        modalOverlay.classList.add("overlay_hidden");
-        body.classList.remove("locked");
+    $(this).find(".modal__close").click(function(){
+        modal.addClass("modal_hidden");
+
+        $("#overlay-modal").addClass("overlay_hidden");
+        $('body').removeClass("locked");
     });
 });
 
 function showModal(modal) {
-    modal.classList.remove("modal_hidden");
-    modalOverlay.classList.remove("overlay_hidden");
-    body.classList.add("locked");
+    modal.removeClass("modal_hidden");
+    $("#overlay-modal").removeClass("overlay_hidden");
+    $('body').addClass("locked");
 }
 
 function hideModal(modal) {
-    modal.classList.add("modal_hidden");
-    modalOverlay.classList.add("overlay_hidden");
-    body.classList.remove("locked");
+    modal.addClass("modal_hidden");
+    $("#overlay-modal").addClass("overlay_hidden");
+    $('body').removeClass("locked");
 }
 
 
 
 // проверка заполненности полей
-function checkRequired (form) {
+function getEmpty (form) {
     const req = form.querySelectorAll(".req");
 
-    let success = false;
+    let empty = 0;
 
     req.forEach((elem,index) => {
         if(elem.type === "checkbox")
         {
             if (!elem.checked) {
                 elem.parentNode.querySelector(".checkbox__text").style.borderBottom = '1px solid red';
-                success = false;
+                empty++;
             }
             else {
                 elem.parentNode.querySelector(".checkbox__text").style.borderBottom = '';
-                success = true;
             }
         }
         else {
+            
             if (!elem.value.trim())
             {
-                success = false;
                 elem.style.borderBottom = '1px solid red';
+                empty++;
             }
             else {
-                success = true;
                 elem.style.borderBottom = '';
             }
         }
     });
 
-    return success;
+    return empty;
 }
 
 
@@ -146,26 +133,32 @@ function checkRequired (form) {
 
 // обратный звонок
 
-const modalCallback = document.getElementById("modal-callback");
-const callbackBtn = document.querySelector(".button-callback");
-const callbackForm = modalCallback.querySelector(".form-callback");
 
 
 // кнопка обратного звонка (в header)
-callbackBtn.addEventListener("click", function(e){
+$('.button-callback').on('click', function(e){
     e.preventDefault();
 
-    showModal(modalCallback);
+    showModal($("#modal-callback"));
 });
 
 
 // обработчик формы обратного звонка
-callbackForm.addEventListener("submit", function(e){
+$('.form-callback').submit(function(e){
     e.preventDefault();
 
-    if (checkRequired(e.target) === true) {
-        alert("ok");
+    if (getEmpty(e.target) === 0) {
+        $.ajax({
+            url: '/php/callbackHandler.php',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json'
+        });
+
         e.target.reset();
+        hideModal($("#modal-callback"));
+        showModal($("#modal-success"));
+        
     }
 });
 
