@@ -768,6 +768,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 0;
 }
 
 .header-nav_hidden {
@@ -793,12 +794,21 @@ main {
 }
 
 .header-menu__link {
-  display: inline-block;
-  padding: 18px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 25px;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-weight: 400;
+}
+
+.header-menu__link:active {
+  background: #4c77ce;
 }
 
 @media screen and (max-width: 992px) {
@@ -903,7 +913,7 @@ main {
 }
 
 .section-constructor {
-  padding: 60px 0px 60px 0px;
+  padding: 60px 15px 60px 15px;
 }
 
 .section-constructor .section__title {
@@ -911,13 +921,6 @@ main {
   text-transform: inherit;
   margin-bottom: 30px;
   font-weight: 600;
-}
-
-@media screen and (max-width: 576px) {
-  .section-constructor {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 
 @media screen and (max-width: 476px) {

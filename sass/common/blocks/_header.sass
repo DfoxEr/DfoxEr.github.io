@@ -71,6 +71,7 @@
 
         &__wrapper
             flex: 1
+            padding: 0
 
         &_hidden
             transform: translateY(0)
@@ -88,11 +89,16 @@
             // smth
 
         &__link
-            display: inline-block
-            padding: 18px 0
+            display: flex
+            padding: 18px 25px
             text-transform: uppercase
             color: #ffffff
             font-size: 14px
+            flex: 1
+        
+
+            &:active
+                background: #4c77ce
 
             @include regular()
 

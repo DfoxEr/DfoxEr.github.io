@@ -1,5 +1,7 @@
 .section
     &-service
+        padding-left: 15px
+        padding-right: 15px
         .section__title
             text-align: left
             margin-bottom: 30px
@@ -84,14 +86,16 @@
                     margin-right: 0
                     margin-bottom: 10px
         
+        @media screen and ( max-width: 576px )
+            .section__paragraph
+                font-size: 14px
+
         @media screen and ( max-width: 475px )
             .section__paragraph
                 line-height: 2
 
             .section__title
                 font-size: 28px
-
-        @media screen and ( max-width: 375px )
 
             .section__img
                 display: none
