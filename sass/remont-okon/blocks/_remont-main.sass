@@ -33,3 +33,25 @@
 
 
         flex: 0 1 33%
+
+    @media screen and ( max-width: 768px )
+        &-category
+            flex: 1 1 33%
+
+            &__img
+                img
+                    width: 100%
+
+
+    @media screen and ( max-width: 576px )
+        &-block
+            &__row
+                flex-direction: column
+                margin-bottom: 0
+
+        &-category
+            &__img
+                margin-bottom: 10px
+            &__name, &__description
+                font-size: 14px
+                text-align: center

@@ -71,6 +71,10 @@ a:visited, a {
   font-style: normal;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: 'Proxima Nova', sans-serif;
   overflow-x: hidden;
@@ -922,13 +926,25 @@ main {
           flex-direction: column;
 }
 
+.section-service .section__paragraphs .section__paragraph {
+  margin: 0 0 20px 0;
+}
+
+.section-service .section__paragraphs .section__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .section-service .section__paragraph {
   line-height: 1.9;
   color: #626262;
   font-weight: 100;
   text-align: justify;
   display: block;
-  margin: 0 0 10px 0;
+}
+
+.section-service .section__img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-service .section__img_left {
@@ -939,6 +955,10 @@ main {
   margin-left: 20px;
 }
 
+.section-service .section__img_big {
+  width: 100%;
+}
+
 .section-service .section__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -947,24 +967,31 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .section-service .section__text:last-child {
   margin-bottom: 0;
 }
 
+.section-service .section__text .section__img_big {
+  margin-top: 20px;
+}
+
 .section-service .section__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section-service .section-list {
   list-style: disc;
   margin-left: 40px;
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.9;
 }
 
 .section-service .section-list__item {
@@ -979,6 +1006,39 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .section-service .section__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-service .section__img_left {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .section-service .section__paragraph {
+    line-height: 2;
+  }
+  .section-service .section__title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-service .section__img {
+    display: none;
+  }
+  .section-service .section__img_big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #checkcostBtn {

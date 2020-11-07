@@ -71,6 +71,10 @@ a:visited, a {
   font-style: normal;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: 'Proxima Nova', sans-serif;
   overflow-x: hidden;
@@ -948,6 +952,34 @@ main {
 
 .remont-category:active .remont-category__name, .remont-category:hover .remont-category__name {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .remont-category {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%;
+  }
+  .remont-category__img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .remont-block__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+  .remont-category__img {
+    margin-bottom: 10px;
+  }
+  .remont-category__name, .remont-category__description {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 .footer {
