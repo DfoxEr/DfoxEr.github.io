@@ -1043,6 +1043,10 @@ main {
 }
 
 @media screen and (max-width: 475px) {
+  .section-service {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .section-service .section__paragraph {
     line-height: 2;
   }
