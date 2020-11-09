@@ -32,3 +32,12 @@ $('.form-zamer').on("submit",function(e){
     }
 
 });
+
+
+// Галерея работ
+
+
+
+$(document).ready(function(){
+    $(".gallery__item").fancybox();
+});
