@@ -6,12 +6,11 @@
 .gallery
 
     &__items
-        // smth
+        display: flex
 
     &__row
         display: flex
         justify-content: space-between
-        margin: 0 -10px
 
     &__item
         display: flex
@@ -19,6 +18,21 @@
 
     &__img
         max-width: 100%
+
+
+    @media screen and ( max-width: 700px )
+        &__items
+            flex-direction: column
+
+        &__item
+            margin: 0 10px 0 0
+            &:last-child
+                margin-right: 0
+
+        &__row
+            margin: 0 10px 10px 10px
+
+
 
 
 // общие классы
