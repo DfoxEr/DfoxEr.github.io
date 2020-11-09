@@ -41,3 +41,14 @@ $('.form-zamer').on("submit",function(e){
 $(document).ready(function(){
     $(".gallery__item").fancybox();
 });
+
+
+
+$("#gallery-link").click(function(e){
+    e.preventDefault();
+
+    $(".burger").trigger("click");
+
+    let offset = $(".section-gallery").offset().top;
+    $('html, body').animate({scrollTop: offset}, 1000);
+});
